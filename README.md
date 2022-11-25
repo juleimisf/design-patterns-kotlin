@@ -1,1 +1,1 @@
-# Design-patterns-koltin
+# Design-patterns-kotlin
