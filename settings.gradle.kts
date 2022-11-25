@@ -1,3 +1,3 @@
 
-rootProject.name = "PatternStrategyKotlin"
+rootProject.name = "DesingPatternKotlin"
 
