@@ -1,4 +1,4 @@
-package PatternStrategy
+package patternStrategy.buyProductsExample
 
 class CreditCard internal constructor(private val number: String,
                                       private val date: String,

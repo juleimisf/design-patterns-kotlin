@@ -1,4 +1,4 @@
-package PatternStrategy
+package patternStrategy.buyProductsExample
 
 class PayByCash : PayStrategy {
     var name: String = ""

@@ -1,4 +1,4 @@
-package PatternStrategy
+package patternStrategy.buyProductsExample
 
 class Order {
 
