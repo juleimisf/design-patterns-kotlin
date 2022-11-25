@@ -8,6 +8,6 @@ Es un patron de comportamiendo, donde encapsulamos diferentes logicas, esto con 
 
 **Strategy:**  es una interfaz que es extendidas por los diferentes algotitmos. Dond el **Contexto** puede llamarla por medio de un **ConcreteStrategy** dentro de ella se define uno o varios metodos que seran utilizados por los algoritmos dentro de los **ConcreteStrategy**.
 
-####**Context:**  Mantiene una referencia de Strategy y selecciona que tipo ConcreteStrategy utilizar.
+**Context:**  Mantiene una referencia de Strategy y selecciona que tipo ConcreteStrategy utilizar.
 
-####**ConcreteStrategy**  implemente la interfaz Strategy y desarrolla el algoritmo.
+**ConcreteStrategy**  implemente la interfaz Strategy y desarrolla el algoritmo.
