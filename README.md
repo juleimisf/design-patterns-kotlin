@@ -14,4 +14,7 @@ Es un patron de comportamiendo, donde encapsulamos diferentes logicas, esto con 
 
 ## Observer pattern
 
-Estable una relación 1 a muchos es decir con 1 o varios dependencias, el cual se encarga de noticar forma automatica a estos deéndencias si el objeto ha cambiado.
+Establece una relación de 1 a muchos, el cobjeto encarga de notificar de forma automatica a sjs dependencias si el objeto aha cambiado.
+
+<img width="620" alt="Screen Shot 2022-11-25 at 22 26 06" src="https://user-images.githubusercontent.com/16981896/204067296-8b8fcdd8-9e90-4e77-895a-6e7cd81ce5f5.png">
+
