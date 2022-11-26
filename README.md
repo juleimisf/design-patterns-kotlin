@@ -13,3 +13,5 @@ Es un patron de comportamiendo, donde encapsulamos diferentes logicas, esto con 
 - **ConcreteStrategy**  implemente la interfaz Strategy y desarrolla el algoritmo.
 
 ## Observer pattern
+
+Estable una relación 1 a muchos es decir con 1 o varios dependencias, el cual se encarga de noticar forma automatica a estos deéndencias si el objeto ha cambiado.
