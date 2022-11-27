@@ -14,7 +14,7 @@ Es un patron de comportamiendo, donde encapsulamos diferentes logicas, esto con 
 
 ## Observer pattern
 
-Es un patron de comportamiento el cual establece una relación de 1 a muchos, el objeto en el momento que haya cambiado se encarga de notificar de forma automatica a sus objetos que estan subescritos a él.
+Es un patron de comportamiento el cual establece una relación de 1 a muchos, el objeto(observadores o publicadores) en el momento que haya cambiado su estado, se encarga de notificar de forma automatica a sus objetos que estan subescritos a él (suscriptores).
 
 <img width="620" alt="Screen Shot 2022-11-25 at 22 26 06" src="https://user-images.githubusercontent.com/16981896/204067296-8b8fcdd8-9e90-4e77-895a-6e7cd81ce5f5.png">
 
