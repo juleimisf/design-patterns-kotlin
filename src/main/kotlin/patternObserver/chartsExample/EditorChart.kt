@@ -1,8 +1,9 @@
 package patternObserver.chartsExample
 
-class EditorChart {
+import kotlin.properties.Delegates
 
-    private val listener: ChartListener? = null
+class EditorChart() {
+
     private val listOfObservers: ArrayList<ChartListener> = ArrayList()
     private var model = CharModel(11f, 11f, 11f)
 
