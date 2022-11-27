@@ -1,7 +1,7 @@
 # Design-patterns-kotlin
 
 
-## Strategy pattern
+## 1. Strategy pattern
 Es un patron de comportamiendo, donde encapsulamos diferentes logicas, esto con la finalidad de poder intercambiar con mucha facilidad estos algoritmos en tiempo de ejecución. Las estrategias siempre se ejecutan dentro del mismo contexto.
 
 <img width="694" alt="Screen Shot 2022-11-24 at 23 16 38" src="https://user-images.githubusercontent.com/16981896/203886974-3f4e40cc-74d9-432f-8f65-5f4d77d8daaf.png">
@@ -10,7 +10,7 @@ Es un patron de comportamiendo, donde encapsulamos diferentes logicas, esto con 
 - **Context:**  Mantiene una referencia de Strategy y selecciona que tipo ConcreteStrategy utilizar.
 - **ConcreteStrategy**  implemente la interfaz Strategy y desarrolla el algoritmo.
 
-## Observer pattern
+## 2. Observer pattern
 
 Es un patron de comportamiento el cual establece una relación de 1 a muchos, el objeto(observadores o publicadores) en el momento que haya cambiado su estado, se encarga de notificar de forma automatica a sus objetos que estan subescritos a él (suscriptores).
 
