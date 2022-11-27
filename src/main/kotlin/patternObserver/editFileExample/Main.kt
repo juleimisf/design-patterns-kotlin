@@ -8,14 +8,14 @@ import patternObserver.editFileExample.observers.LogOpenListener
 fun main(args: Array<String>) {
     val editor = Editor()
 
-    editor.events.subscribe("open",  LogOpenListener("/path/to/log/file.txt"))
-    editor.events.subscribe("save",  EmailNotificationListener("admin@example.com"))
+    val logListener = LogOpenListener("/path/to/log/file.txt")
+    val emailListener = EmailNotificationListener("admin@example.com")
 
-    try {
-        editor.openFile("test.txt")
-        editor.saveFile()
-    } catch (e: Exception) {
-        e.printStackTrace()
-    }
+    editor.events.subscribe("open", logListener)
+    editor.events.subscribe("open", emailListener)
+    editor.events.subscribe("save", emailListener)
+
+    editor.openFile("test.txt")
+    editor.saveFile()
 
 }

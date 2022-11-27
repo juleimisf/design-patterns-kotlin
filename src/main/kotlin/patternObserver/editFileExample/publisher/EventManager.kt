@@ -4,28 +4,31 @@ import patternObserver.editFileExample.EventListener
 import java.io.File
 
 
-class EventManager(private val operation: String) {
+class EventManager(vararg operations: String) {
     private var listeners: HashMap<String, ArrayList<EventListener>> = HashMap()
 
     init {
-        listeners.put(operation, arrayListOf())
+        for (operation in operations) {
+            listeners[operation] = ArrayList()
+        }
     }
 
-    fun subscribe(eventType: String, listener: EventListener) {
-        val observer = ArrayList<EventListener>()
-        observer.add(listener)
-        listeners.put(eventType, observer)
+    fun subscribe(eventType: String?, listener: EventListener) {
+        val users = listeners[eventType]
+        users?.add(listener)
     }
 
     fun unsubscribe(eventType: String?, listener: EventListener) {
-        listeners.remove(eventType)
+        val users = listeners[eventType]
+        users?.remove(listener)
     }
 
     fun notify(eventType: String?, file: File?) {
-        val users: ArrayList<EventListener>? = listeners[eventType]
-
-        users?.forEach {
-            it.update(eventType!!, file!!)
+        val users = listeners[eventType]
+        users?.let {
+            for (listener in it) {
+                listener.update(eventType, file)
+            }
         }
     }
 }

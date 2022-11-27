@@ -4,7 +4,7 @@ import patternObserver.editFileExample.publisher.EventManager
 import java.io.File
 
 class Editor {
-    var events: EventManager = EventManager("hola")
+    var events: EventManager = EventManager("open", "save")
     private var file: File? = null
 
     fun openFile(filePath: String?) {
@@ -12,12 +12,9 @@ class Editor {
         events.notify("open", file)
     }
 
-    @Throws(Exception::class)
     fun saveFile() {
-        if (file != null) {
+        file?.let {
             events.notify("save", file)
-        } else {
-            throw Exception("Please open a file first.")
         }
     }
 }
