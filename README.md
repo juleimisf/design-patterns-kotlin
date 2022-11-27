@@ -18,3 +18,7 @@ Es un patron de comportamiento el cual establece una relación de 1 a muchos, el
 
 <img width="620" alt="Screen Shot 2022-11-25 at 22 26 06" src="https://user-images.githubusercontent.com/16981896/204067296-8b8fcdd8-9e90-4e77-895a-6e7cd81ce5f5.png">
 
+- **Subject:** se define la lista de observadores, seguido de los metodos de subcripción y desubcripción.
+- **Observer:** interfaz que se encarga de definir uno o varios metodos que implementar{an los subcriptores.
+- **ConcreteSubject:** registra a todos los observadores, y envia las notificaciones correspondientes a los subcriptes.
+- **ConcreteObserver:** Mantiene una relación con el Observer para mostrar dichos cambios emitido por el Concrete Subject.
