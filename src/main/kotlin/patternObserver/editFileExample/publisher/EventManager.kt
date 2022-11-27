@@ -1,6 +1,6 @@
 package patternObserver.editFileExample.publisher
 
-import patternObserver.EventListener
+import patternObserver.editFileExample.EventListener
 import java.io.File
 
 

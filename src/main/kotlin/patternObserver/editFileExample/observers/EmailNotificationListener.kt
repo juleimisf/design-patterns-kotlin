@@ -1,6 +1,6 @@
 package patternObserver.editFileExample.observers
 
-import patternObserver.EventListener
+import patternObserver.editFileExample.EventListener
 import java.io.File
 
 class EmailNotificationListener(private val email: String) : EventListener {
