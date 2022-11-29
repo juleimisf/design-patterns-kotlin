@@ -22,7 +22,7 @@ Es un patron de comportamiento el cual establece una relación de 1 a muchos, el
 - **ConcreteObserver:** Mantiene una relación con el Observer para mostrar dichos cambios emitido por el Concrete Subject.
 
 ## 3. Decorator pattern
-Este patron nos permite exterder comportamiento de forma dinamica, es decir pemite agregar nuevps comportamientos y funcionalidades a un objeto especifico sin que este añtere su esttructura por lo cual los ojetos que depende de este objeto no afectan su comportamiento.
+Este patron nos permite exterder comportamiento de forma dinamica, es decir pemite agregar nuevps comportamientos y funcionalidades a objetos sin que estos añtere su esttructura por lo cual los ojetos que depende de estos no afectan su comportamiento.
 
 <img width="926" alt="Screen Shot 2022-11-28 at 22 19 59" src="https://user-images.githubusercontent.com/16981896/204414934-9a5f3dfd-c735-4e69-b3bc-7e2fc64e2a56.png">
 
