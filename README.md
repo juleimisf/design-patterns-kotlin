@@ -50,6 +50,11 @@ Cuando puedo usar este patron?
 
 - **Concrete Factory:** se encarga de devolver nuevos objetos diferentes, anulando el metedoto base del **factory**
 
+## 4. Abstract Factory
+
+<img width="769" alt="Screen Shot 2022-12-10 at 19 16 25" src="https://user-images.githubusercontent.com/16981896/206877361-ccd79c4c-6fef-4c89-9bc7-13c15498abcf.png">
+
+
 ## GUIA
 ![guia_uml](https://user-images.githubusercontent.com/16981896/204416505-99a97310-5096-4677-8fe5-cfeb7815d002.png)
 
