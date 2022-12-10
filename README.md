@@ -35,7 +35,7 @@ Tamnien llamado wrapper pattern es un patron de diseño estructural altamente co
 
 
 ## 3. Factory pattern
-Este patron encapsula la logica de creación de un subtipo de onjetos determinado el cual se hace a traves de una clase factory
+Este patron encapsula la logica de creación de un subtipo de onjetos determinado el cual se hace a traves de una clase factory. Aca el usuario final no se preocupa por la logica de creacion del objeto.
 
 <img width="701" alt="Screen Shot 2022-12-01 at 18 10 01" src="https://user-images.githubusercontent.com/16981896/205159845-8bcda4c0-a133-4e22-a9e9-679967d726e8.png">
 
