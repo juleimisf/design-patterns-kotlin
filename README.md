@@ -41,11 +41,12 @@ Cuando puedo usar este patron?
 - Cuando una clase no sabe qué subclases se requerirán para crear
 - Cuando una clase quiere que sus subclases especifiquen los objetos a crear.
 - Cuando las clases padres eligen la creación de objetos para sus subclases.
+- 
+<img width="701" alt="Screen Shot 2022-12-01 at 18 10 01" src="https://user-images.githubusercontent.com/16981896/205159845-8bcda4c0-a133-4e22-a9e9-679967d726e8.png">
 
 --**Product:** es una interfaz que es comun entre todos los objetos que puede crear el factory y sus subclases.
-<img width="701" alt="Screen Shot 2022-12-01 at 18 10 01" src="https://user-images.githubusercontent.com/16981896/205159845-8bcda4c0-a133-4e22-a9e9-679967d726e8.png">
 --**Product concrete:** son diferentes implemnetaciones del **product**.
---**Factory:** se encarga de declarar un metodo para la creación de los objetos del tipo **product** donde es importante que el tipo devuelto dentro de este metodo sea igual a la intefaz **product**
+--**Factory:** se encarga de declarar un metodo para la creación de los objetos del tipo **product** donde es importante que el tipo devuelto dentro de este metodo sea igual a la intefaz **product**.
 
 
 ## GUIA
