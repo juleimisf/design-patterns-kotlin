@@ -35,14 +35,17 @@ Tamnien llamado wrapper pattern es un patron de diseño estructural altamente co
 
 
 ## 3. Factory pattern
-Es un patron que proporciona una forma de delegarla lógica de creación de instancias, a objetos secundarios. Aca el usuario final no se preocupa por la logica de creacion del objeto. Normalmente se puede hacer uso de este patron cuando se posee una super clase y esta posee multiples subclases, para asi entonces devolver una de las subclases segun sea el requerimientop del usuario final. Una de las ventajes que se puede mencionar de este patron es que delega la responsabilidad de creación de instacias a una clase factory en ves de que sea el cliente.
+Es un patron de diseño creacional, que proporciona una forma de delegar la lógica de creación de instancias, a objetos secundarios. Aca el usuario final no se preocupa por la logica de creacion del objeto. Normalmente se puede hacer uso de este patron cuando se posee una super clase y esta posee multiples subclases, para asi entonces devolver una de las subclases segun sea el requerimientop del usuario final. Una de las ventajes que se puede mencionar de este patron es que delega la responsabilidad de creación de instacias a una clase factory en ves de que sea el cliente.
 
 Cuando puedo usar este patron? 
 - Cuando una clase no sabe qué subclases se requerirán para crear
 - Cuando una clase quiere que sus subclases especifiquen los objetos a crear.
 - Cuando las clases padres eligen la creación de objetos para sus subclases.
 
+--**Product:** es una interfaz que es comun entre todos los objetos que puede crear el factory y sus subclases.
 <img width="701" alt="Screen Shot 2022-12-01 at 18 10 01" src="https://user-images.githubusercontent.com/16981896/205159845-8bcda4c0-a133-4e22-a9e9-679967d726e8.png">
+--**Product concrete:** son diferentes implemnetaciones del **product**.
+--**Factory:** se encarga de declarar un metodo para la creación de los objetos del tipo **product** donde es importante que el tipo devuelto dentro de este metodo sea igual a la intefaz **product**
 
 
 ## GUIA
