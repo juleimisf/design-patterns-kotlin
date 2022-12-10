@@ -1,4 +1,4 @@
-package patternFactory
+package patternFactory.currencyExample
 
 class Euro : ICurrency {
     override fun symbol() = "€"

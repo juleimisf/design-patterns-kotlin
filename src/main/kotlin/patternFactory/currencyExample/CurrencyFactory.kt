@@ -1,4 +1,4 @@
-package patternFactory
+package patternFactory.currencyExample
 
 
 object CurrencyFactory {

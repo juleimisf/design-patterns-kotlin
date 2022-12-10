@@ -1,5 +1,8 @@
 package patternFactory
 
+import patternFactory.currencyExample.Country
+import patternFactory.currencyExample.CurrencyFactory
+
 fun main(args: Array<String>) {
 
     val currency = CurrencyFactory.currency(Country.CountryEnum.SPAIN)
