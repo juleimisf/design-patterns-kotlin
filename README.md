@@ -44,10 +44,11 @@ Cuando puedo usar este patron?
 - 
 <img width="701" alt="Screen Shot 2022-12-01 at 18 10 01" src="https://user-images.githubusercontent.com/16981896/205159845-8bcda4c0-a133-4e22-a9e9-679967d726e8.png">
 
---**Product:** es una interfaz que es comun entre todos los objetos que puede crear el factory y sus subclases.
---**Product concrete:** son diferentes implemnetaciones del **product**.
---**Factory:** se encarga de declarar un metodo para la creación de los objetos del tipo **product** donde es importante que el tipo devuelto dentro de este metodo sea igual a la intefaz **product**.
+- **Product:** es una interfaz que es comun entre todos los objetos que puede crear el factory y sus subclases.
+- **Product concrete:** son diferentes implemnetaciones del **product**.
+- **Factory:** se encarga de declarar un metodo para la creación de los objetos del tipo **product** donde es importante que el tipo devuelto dentro de este metodo sea igual a la intefaz **product**.
 
+- **Concrete Factory:** se encarga de devolver nuevos objetos diferentes, anulando el metedoto base del **factory**
 
 ## GUIA
 ![guia_uml](https://user-images.githubusercontent.com/16981896/204416505-99a97310-5096-4677-8fe5-cfeb7815d002.png)
