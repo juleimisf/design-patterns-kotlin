@@ -1,7 +1,7 @@
 # Design-patterns-kotlin
 
 
-## 1. Strategy pattern
+## 1. Strategy 
 Es un patron de comportamiendo, donde encapsulamos diferentes logicas, esto con la finalidad de poder intercambiar con mucha facilidad estos algoritmos en tiempo de ejecución. Las estrategias siempre se ejecutan dentro del mismo contexto.
 
 <img width="694" alt="Screen Shot 2022-11-24 at 23 16 38" src="https://user-images.githubusercontent.com/16981896/203886974-3f4e40cc-74d9-432f-8f65-5f4d77d8daaf.png">
@@ -10,7 +10,7 @@ Es un patron de comportamiendo, donde encapsulamos diferentes logicas, esto con 
 - **Context:**  Mantiene una referencia de Strategy y selecciona que tipo ConcreteStrategy utilizar.
 - **ConcreteStrategy**  implemente la interfaz Strategy y desarrolla el algoritmo.
 
-## 2. Observer pattern
+## 2. Observer 
 
 Es un patron de comportamiento el cual establece una relación de 1 a muchos, el objeto(observadores o publicadores) en el momento que haya cambiado su estado, se encarga de notificar de forma automatica a sus objetos que estan subescritos a él (suscriptores).
 
@@ -21,7 +21,7 @@ Es un patron de comportamiento el cual establece una relación de 1 a muchos, el
 - **ConcreteSubject:** registra a todos los observadores, y envia las notificaciones correspondientes a los subcriptores.
 - **ConcreteObserver:** Mantiene una relación con el Observer para mostrar dichos cambios emitido por el Concrete Subject.
 
-## 3. Decorator pattern
+## 3. Decorator 
 Tamnien llamado wrapper pattern es un patron de diseño estructural altamente conocido. Este patron nos permite exterder comportamientos de forma dinamica, es decir pemite agregar nuevos comportamientos y funcionalidades a objetos sin que estos alteren su esttructura original.
 
 <img width="926" alt="Screen Shot 2022-11-28 at 22 19 59" src="https://user-images.githubusercontent.com/16981896/204414934-9a5f3dfd-c735-4e69-b3bc-7e2fc64e2a56.png">
@@ -34,7 +34,7 @@ Tamnien llamado wrapper pattern es un patron de diseño estructural altamente co
 - **Concrete decorator:** es una subclase de la clase abstracta Decorator donde se establecen los comportamiento para los objetos proporcionados.
 
 
-## 3. Factory pattern
+## 3. Factory Method
 Es un patron de diseño creacional, que proporciona una forma de delegar la lógica de creación de instancias, a objetos secundarios. Aca el usuario final no se preocupa por la logica de creacion del objeto. Normalmente se puede hacer uso de este patron cuando se posee una super clase y esta posee multiples subclases, para asi entonces devolver una de las subclases segun sea el requerimientop del usuario final.
 
 Cuando puedo usar este patron? 
@@ -51,13 +51,13 @@ Cuando puedo usar este patron?
 - **Concrete Factory:** se encarga de devolver nuevos objetos diferentes, anulando el metedoto base del **factory**
 
 ## 4. Abstract Factory
-Este patron se encarga de crear otras fabricas y proporciona una de las mejores formas de crear un objeto. Al igual que el patron Factory Method tambien es considerado un patron de creacion.
+Este patron se encarga de crear otras fabricas y proporciona una de las mejores formas de crear un objeto es decir nos permite crear familias de productos. Al igual que el patron Factory Method tambien es considerado un patron de creacion.
 
 <img width="769" alt="Screen Shot 2022-12-10 at 19 16 25" src="https://user-images.githubusercontent.com/16981896/206877361-ccd79c4c-6fef-4c89-9bc7-13c15498abcf.png">
 
 - **Abstract Factory:** es una interfaz que define varios metodos para la creación de los objetos.
-- **Concrete Factory:** se encarga de implemnetar metodos de la clase **Abstract Factory**.
-- **
+- **Concrete Factory:** se encarga de implemnetar metodos de la clase **Abstract Factory** es decir los diferentes tipos de familia de productos.
+- **Abstract Product:** procude un conjunto de productos.
 
 ## GUIA
 ![guia_uml](https://user-images.githubusercontent.com/16981896/204416505-99a97310-5096-4677-8fe5-cfeb7815d002.png)
