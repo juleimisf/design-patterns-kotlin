@@ -51,9 +51,13 @@ Cuando puedo usar este patron?
 - **Concrete Factory:** se encarga de devolver nuevos objetos diferentes, anulando el metedoto base del **factory**
 
 ## 4. Abstract Factory
+Este patron se encarga de crear otras fabricas y proporciona una de las mejores formas de crear un objeto. Al igual que el patron Factory Method tambien es considerado un patron de creacion.
 
 <img width="769" alt="Screen Shot 2022-12-10 at 19 16 25" src="https://user-images.githubusercontent.com/16981896/206877361-ccd79c4c-6fef-4c89-9bc7-13c15498abcf.png">
 
+- **Abstract Factory:** es una interfaz que define varios metodos para la creación de los objetos.
+- **Concrete Factory:** se encarga de implemnetar metodos de la clase **Abstract Factory**.
+- **
 
 ## GUIA
 ![guia_uml](https://user-images.githubusercontent.com/16981896/204416505-99a97310-5096-4677-8fe5-cfeb7815d002.png)
