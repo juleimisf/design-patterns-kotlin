@@ -1,10 +1,10 @@
 package patternAbstractFactory.shapeExample
 
 fun main(args: Array<String>) {
-    val circleRed = ColorFactory()
-    val squareBlue = ShapeFactory()
+    val color = FactoryProvider().getFactoryColor()
+    val shape = FactoryProvider().getFactoryShape()
 
-    println("Figura de color {${circleRed.getColor().fill()}}}")
-    println("Figura {${squareBlue.getShape().draw()} creado")
+    println("Figura de color {${color.getColor()?.fill()}}}")
+    println("Figura {${shape.getShape()?.draw()} creado")
 
 }
