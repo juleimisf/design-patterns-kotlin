@@ -1,51 +1,40 @@
 package patternDecorator
 
-abstract class Drink(val des : String = "pp") {
-    abstract fun cost(): Double
+interface Drink {
+    fun cost(): Double
+    fun getDescription(): String
 }
-class Espresso : Drink() {
+
+class DarkRoast : Drink {
     override fun cost() = 1.0
+    override fun getDescription() = "Dark Roast"
+}
+
+class Coffee : Drink {
+    override fun cost() = 1.1
+    override fun getDescription() = "Black coffee"
 
 }
 
-class Coffee : Drink("hola2") {
+class NonCaffeine : Drink {
     override fun cost() = 2.0
-
-
+    override fun getDescription() = "Non Caffeine"
 }
 
-class NonCaffeine : Drink() {
-    override fun cost() = 2.5
-}
+abstract class AdditiveDecorator : Drink
 
-
-abstract class AdditiveDecorator : Drink() {
-    abstract fun description(): String
-}
-
-class MilkDecorator(private var drink: Drink) : AdditiveDecorator() {
-    override fun description() = drink.des + " hola"
-
-    override fun cost() = 1 + drink.cost()
+class MilkDecorator(var drink: Drink) : AdditiveDecorator() {
+    override fun cost() = drink.cost() + 1.0
+    override fun getDescription() = drink.getDescription() + " + Milk"
 
     companion object {
         fun withDrink(newDrink: Drink) = MilkDecorator(newDrink)
     }
 }
 
-class CinnamonDecorator(var drink: Drink) : AdditiveDecorator(){
-    override fun cost() = drink.cost() + 1
-    override fun description() = "${drink.des} + Cinnamon"
-
-    companion object {
-        fun withDrink(newDrink: Drink) = CinnamonDecorator(newDrink)
-    }
-}
-
-class HoneyDecorator(var drink: Drink) : AdditiveDecorator() {
-    override fun cost() = drink.cost() + 1
-    override fun description() = "${drink.des} + Honey"
-
+class CinnamonDecorator(var drink: Drink) : AdditiveDecorator() {
+    override fun cost() = drink.cost() + 1.0
+    override fun getDescription() = drink.getDescription() + " + Cinnamon"
     companion object {
         fun withDrink(newDrink: Drink) = CinnamonDecorator(newDrink)
     }
