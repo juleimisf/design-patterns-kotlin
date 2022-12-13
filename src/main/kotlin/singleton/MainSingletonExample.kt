@@ -1,8 +1,5 @@
 package singleton
 
-import java.io.BufferedReader
-import java.io.InputStreamReader
-
 fun main(args: Array<String>) {
     Singleton.printVar()
     Singleton.aux = "This is the new name var"
