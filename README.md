@@ -59,6 +59,9 @@ Este patron se encarga de crear otras fabricas y proporciona una de las mejores 
 - **Concrete Factory:** se encarga de implemnetar metodos de la clase **Abstract Factory** es decir los diferentes tipos de familia de productos.
 - **Abstract Product:** procude un conjunto de productos.
 
+## 5. Singleton
+Este es un patron creacional y su función principal es crear una unica instancia de una clase y q ue esta tenga un acceso goblal. Este quizá sea una de los patrones mas faciles de implementar pero hay que tener sumo cuidado de no abusar del mismo.
+
 ## GUIA
 ![guia_uml](https://user-images.githubusercontent.com/16981896/204416505-99a97310-5096-4677-8fe5-cfeb7815d002.png)
 
