@@ -60,7 +60,7 @@ Este patron se encarga de crear otras fabricas y proporciona una de las mejores 
 - **Abstract Product:** procude un conjunto de productos.
 
 ## 5. Singleton
-Este es un patron creacional y su función principal es crear una unica instancia de una clase y q ue esta tenga un acceso goblal. Este quizá sea una de los patrones mas faciles de implementar pero hay que tener sumo cuidado de no abusar del mismo.
+Este es un patron creacional y su función principal es crear una unica instancia de una clase y q ue esta tenga un acceso goblal. Este quizá sea una de los patrones mas faciles de implementar pero hay que tener sumo cuidado de no abusar del mismo. Es ideal que el constructor no sea publico y que el cliente solo tenga acceso a la obtención de la instancia.
 
 <img width="814" alt="Screen Shot 2022-12-12 at 23 10 44" src="https://user-images.githubusercontent.com/16981896/207208964-df3a83a7-ea44-4cd6-9f5f-cdcc228fd0ed.png">
 
