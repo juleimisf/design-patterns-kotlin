@@ -66,6 +66,8 @@ Este es un patron creacional y su función principal es crear una unica instanci
 
 - **Singleton Class:** declarra un metodo que se encarga de devolver la misma instancia de su propia clase.
 
+Varias de las ventajas de este patron es que asegura que solo tengamos una única instancia de una clase, ademas de que dicha instancia se podrá acceder de forma global y este singleton solo se crea una única vez.
+
 
 ## GUIA
 ![guia_uml](https://user-images.githubusercontent.com/16981896/204416505-99a97310-5096-4677-8fe5-cfeb7815d002.png)
