@@ -1,3 +1,4 @@
+<img width="400" alt="Screen Shot 2022-12-15 at 00 02 05" src="https://user-images.githubusercontent.com/16981896/207762533-84cc2199-2e7e-42b1-bfc2-c7c09c5ad593.png">
 # Design-patterns-kotlin
 
 
