@@ -1,5 +1,7 @@
 package singleton
 
+import java.sql.DriverManager.println
+
 fun main(args: Array<String>) {
     Singleton.printVar()
     Singleton.aux = "This is the new name var"
