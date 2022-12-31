@@ -73,7 +73,8 @@ Varias de las ventajas de este patron es que asegura que solo tengamos una únic
 Es un patron de comportamiento, nos permite desacoplar las acciones de los objetos, es decir del objeto que solicita realizar una acción del que realizará dicha acción.
 
 - **Client:** crear los comandos concretos es decir los *Concrere Commands* que implementan la interfaz *Command*, ademas de esto tambien crea el *Receiver*
-- **Invoker:** es una interfaz que posee el metodo invoker(), es el encargado de almacenar una lista de comandos listos para ejecutarse. Importante mencionar que el *Invoker* desconoce la forma de implementación de la solicitud.
+- **Commmand:** es una interfaz que declara el meedo *execute()* encargado de ejecutar el comando.
+- **Invoker:** es el encargado de almacenar una lista de comandos listos para ejecutarse. Importante mencionar que el *Invoker* desconoce la forma de implementación de la solicitud.
 - **Receiver:** es quien conoce la forma de implementar la solicitud, lo hace a traves del comando concreto que hace uso de la interfaz Command.
 - **Concrete Commands:** es el que implementa la solicitud en si.
 <img width="762" alt="Screen Shot 2022-12-29 at 00 32 57" src="https://user-images.githubusercontent.com/16981896/209899863-65076852-3b57-4451-bb62-edae0e635d5f.png">
