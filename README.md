@@ -80,6 +80,7 @@ Es un patron de comportamiento, nos permite desacoplar las acciones de los objet
 <img width="762" alt="Screen Shot 2022-12-29 at 00 32 57" src="https://user-images.githubusercontent.com/16981896/209899863-65076852-3b57-4451-bb62-edae0e635d5f.png">
 
 ## 5. Adapter
+Entra dentro d elos patrones estructurales
 
 
 ## GUIA
