@@ -79,6 +79,8 @@ Es un patron de comportamiento, nos permite desacoplar las acciones de los objet
 - **Concrete Commands:** es el que implementa la solicitud en si.
 <img width="762" alt="Screen Shot 2022-12-29 at 00 32 57" src="https://user-images.githubusercontent.com/16981896/209899863-65076852-3b57-4451-bb62-edae0e635d5f.png">
 
+## 5. Adapter
+
 
 ## GUIA
 ![guia_uml](https://user-images.githubusercontent.com/16981896/204416505-99a97310-5096-4677-8fe5-cfeb7815d002.png)
