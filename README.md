@@ -108,7 +108,7 @@ Entra dentro d elos patrones estructurales
 - **Facade:** interfaz simplificada para interactuar con el subsistema complejo. 
 - **SubSystem:** son los componentes del subsistema
 
-### Template Method
+## 6.Template Method
 
 Suponga que es su primer dia en una pizzeria, sus compañeros cada dia crean diferentes tipos de pizzas Margarita, vegetariana, Peperoni, etc, donde cada una de ellos siguen el mismo proceso general que es mezclar los ingredientes para la masa, amasar, colococarlos los topping y hornear sin embargo cada tipo de pizza varian un poco en sus ingredientes o tiempo de cocción, el patron template es similar proporciona una estructura para un proceso o algoritmo pero permite que detalles especifcos sean implementados por las subclases.
 
