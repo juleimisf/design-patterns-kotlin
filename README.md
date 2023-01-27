@@ -93,6 +93,11 @@ Definido como una patron de diseño estructural permite ocultar la complejidad d
 
 <img width="640" alt="Screen Shot 2023-01-26 at 21 23 28" src="https://user-images.githubusercontent.com/16981896/214979850-7e7f305d-6ce1-4659-847b-eb985894e971.png">
 
+- **Client:**
+- **Facade:**
+- **SubSystem:**
+
+
 
 ## GUIA
 ![guia_uml](https://user-images.githubusercontent.com/16981896/204416505-99a97310-5096-4677-8fe5-cfeb7815d002.png)
