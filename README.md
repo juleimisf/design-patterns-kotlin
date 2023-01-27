@@ -79,6 +79,30 @@ Es un patron de comportamiento, nos permite desacoplar las acciones de los objet
 - **Concrete Commands:** es el que implementa la solicitud en si.
 <img width="762" alt="Screen Shot 2022-12-29 at 00 32 57" src="https://user-images.githubusercontent.com/16981896/209899863-65076852-3b57-4451-bb62-edae0e635d5f.png">
 
+## 5. Adapter
+Entra dentro d elos patrones estructurales
+
+## 5. Facade
+ Imagina que deseas implementar un sistema de seguridad en tu casa que contengas subsistemas como por ejemplo: un sistema de alarma, sistema de sensores, sistema de camara de vigilancia en entre otros. El dueño de la casa necesita de una interfaz simple, comoda y facil de usar  para interactuar con estos subsistema y mantener su hogar seguro, aqui es que aparace el patron Facade, el usuario no tiene la necesidad de  saber todo lo complejo o lo que ocurre en cada subsistema para poder funcionar.
+
+### Definición
+ Definido como una patron de diseño estructural permite ocultar la complejidad de un subsistema esto por medio de una interfaz bastate simple. Esto nos ayuda a poder interactura con el sistema de forma más sencilla sin tener que procuparnos de lo que sucede por detras.
+
+ ### ¿Qué puedo hacer con Facade?
+  1. **Ocultar la complejidad:** podemos ocultar lo complejo de un sistema por medio una una interdaz facil de usar. 
+  2. **Interfaz Única:** Proporcionando dicha interfaz unica que nos permite que sea facil de interacturar con el sistema complejo.
+  3. **Reutilizar:** permite la reutilización de los componentes dentro del mismo sistema.
+  4. **Seguridad:** ya que se ocultan los detalles técnicos o internos de un sistema y solo se hace uso de la interfaz que proporciona asegura que solo se limite la interaccion a travez de esta interfaz.
+  5. **Bajo acoplamiento:** con este patrón se evita que las clases **Client** esta acopladas las clases del subsistema de forma directa esto permite actualizarlas, modificarlas y hasta cambiarlas y no afectara el comportamiento del Client.
+
+<img width="640" alt="Screen Shot 2023-01-26 at 21 23 28" src="https://user-images.githubusercontent.com/16981896/214979850-7e7f305d-6ce1-4659-847b-eb985894e971.png">
+
+### Deninición de cada elemento
+- **Client:** hace uso de la interfaz para interactuar con el subsistema.
+- **Facade:** interfaz simplificada para interactuar con el subsistema complejo. 
+- **SubSystem:** son los componentes del subsistema
+
+
 
 ## GUIA
 ![guia_uml](https://user-images.githubusercontent.com/16981896/204416505-99a97310-5096-4677-8fe5-cfeb7815d002.png)
