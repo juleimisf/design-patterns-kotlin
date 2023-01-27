@@ -96,6 +96,7 @@ Entra dentro d elos patrones estructurales
   5. **Bajo acoplamiento:** con este patrón se evita que las clases **Client** esta acopladas las clases del subsistema de forma directa esto permite actualizarlas, modificarlas y hasta cambiarlas y no afectara el comportamiento del Client.
 
 <img width="640" alt="Screen Shot 2023-01-26 at 21 23 28" src="https://user-images.githubusercontent.com/16981896/214979850-7e7f305d-6ce1-4659-847b-eb985894e971.png">
+
 ### Deninición de cada elemento
 - **Client:** hace uso de la interfaz para interactuar con el subsistema.
 - **Facade:** interfaz simplificada para interactuar con el subsistema complejo. 
