@@ -108,6 +108,7 @@ Entra dentro d elos patrones estructurales
 - **Facade:** interfaz simplificada para interactuar con el subsistema complejo. 
 - **SubSystem:** son los componentes del subsistema
 
+###Template Method
 
 
 ## GUIA
