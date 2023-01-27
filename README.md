@@ -84,7 +84,7 @@ Entra dentro d elos patrones estructurales
 
 ## 5. Facade
 Definido como una patron de diseño estructural permite ocultar la complejidad de un subsistema esto por medio de una interfaz bastate simple. Esto nos ayuda a poder interactura con el sistema de forma más sencilla sin tener que procuparnos de lo que sucede por detras.
- # ¿Qué puedo hacer con Facade?
+ ### ¿Qué puedo hacer con Facade?
   1. **Oculta la complejidad:** podemos ocultar lo complejo de un subsistema por medio una una interdaz facil de usar. 
   2. **Posee una interfaz única:** Proporcionando dicha interfaz unica que nos permite que sea facil de interacturar con el subsistema complejo.
   3. **Reutilizacion:** permite la reutilización de los componentes dentro de la misma aplicación.
