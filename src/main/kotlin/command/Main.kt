@@ -1,9 +1,9 @@
 
-import command.concreteCommand.ConcreteOffTvCommand
-import command.concreteCommand.ConcreteOnRadioCommand
-import command.concreteCommand.ConcreteOnTvCommand
-import command.invoker.ButtonInvoker
-import command.receiver.ElectronicsReceiver
+import command.universalControlExample.concreteCommand.ConcreteOffTvCommand
+import command.universalControlExample.concreteCommand.ConcreteOnRadioCommand
+import command.universalControlExample.concreteCommand.ConcreteOnTvCommand
+import command.universalControlExample.invoker.ButtonInvoker
+import command.universalControlExample.receiver.ElectronicsReceiver
 
 
 fun main(args: Array<String>) {
