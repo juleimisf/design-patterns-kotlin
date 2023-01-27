@@ -1,1 +1,0 @@
-![](/Users/j.abache.gonzalez/Desktop/Screen Shot 2023-01-27 at 18.39.31.png)
