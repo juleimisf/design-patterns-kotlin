@@ -1,3 +1,9 @@
+Los patrones de diseño son soluciones estandarizadas a problemas que surgen en el desarrollo de programas. Estos patrones nos ayudan a estructurar el código de una manera que sea fácil de entender, de escalar y mantener. Existen diferentes categorias de patrones de diseño como por ejemplo:
+
+- **Estructurales:** son aquellos que se enfocan en como conectar y organizar objetos para lograr una funcionalidad en particular.
+- **De comportamiento:** se enfoca en como los objetos de comunican e interactuan entre si.
+
+
 <img width="400" alt="Screen Shot 2022-12-15 at 00 02 05" src="https://user-images.githubusercontent.com/16981896/207762533-84cc2199-2e7e-42b1-bfc2-c7c09c5ad593.png">
 # Design-patterns-kotlin
 
