@@ -1,6 +1,6 @@
 package facade.homeTheaterExample
 
-class Facade(val projector: Projector, val popCorn: PopCorn, val dvdPlayer: DvdPlayer) {
+class Facade(private val projector: Projector, private val popCorn: PopCorn, private val dvdPlayer: DvdPlayer) {
     fun init(){
         projector.on()
         dvdPlayer.on()
