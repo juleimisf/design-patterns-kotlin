@@ -108,6 +108,19 @@ Entra dentro d elos patrones estructurales
 - **Facade:** interfaz simplificada para interactuar con el subsistema complejo. 
 - **SubSystem:** son los componentes del subsistema
 
+## 6.Template Method
+
+Suponga que es su primer dia en una pizzeria, sus compañeros cada dia crean diferentes tipos de pizzas Margarita, vegetariana, Peperoni, etc, donde cada una de ellos siguen el mismo proceso general que es mezclar los ingredientes para la masa, amasar, colococarlos los topping y hornear sin embargo cada tipo de pizza varian un poco en sus ingredientes o tiempo de cocción, el patron template es similar proporciona una estructura para un proceso o algoritmo pero permite que detalles especifcos sean implementados por las subclases.
+
+### Ventajas
+- **Abtracción:** gracias a este patrón podemos abstraer la logica de un algoritmo de sus implementación especifica.
+- **Modificable:** permite hacer cambios sobre un algoritmo en especifico sin tener que cambiar el código existente.
+- **Adaptable:** haciendo uso de este patrón podemos crear jerarquias de clases que se adapten a diferentes escenarios sin la necesidad de escribir código adicional. 
+
+
+Suponga que es su primer dia en una pizzeria, sus compañeros cada dia crean diferentes tipos de pizzas Margarita, vegetariana, Peperoni, etc, donde cada una de ellos siguen el mismo proceso general que es mezclar los ingredientes para la masa, amasar, colococarlos los topping y hornear sin embargo cada tipo de pizza varian un poco en sus ingredientes o tiempo de cocción, el patron template es similar proporciona una estructura para un proceso o algoritmo pero permite que detalles especifcos sean implementados por las subclases.
+
+<img width="702" alt="Screen Shot 2023-01-27 at 20 24 03" src="https://user-images.githubusercontent.com/16981896/215224371-b0c34171-8b25-4ac3-8520-72977e074c8a.png">
 
 
 ## GUIA
