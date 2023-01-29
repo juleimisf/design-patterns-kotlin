@@ -1,4 +1,4 @@
-package templateMethod
+package templateMethod.restaurantExample
 
 fun main() {
 
@@ -14,5 +14,5 @@ fun main() {
 
     pizza.make()
     println("Your ${readln()} is ready!!!")
-    
+
 }

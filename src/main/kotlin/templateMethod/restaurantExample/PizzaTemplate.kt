@@ -1,4 +1,4 @@
-package templateMethod
+package templateMethod.restaurantExample
 
 abstract class PizzaTemplate {
     fun make() {

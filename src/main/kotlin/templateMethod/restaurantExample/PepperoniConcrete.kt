@@ -1,4 +1,4 @@
-package templateMethod
+package templateMethod.restaurantExample
 
 class PepperoniConcrete : PizzaTemplate() {
     override fun putIngredients() {
