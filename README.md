@@ -130,6 +130,9 @@ El patrón Iterator provee una forma bastante estandar de acceder a los elemento
 - **Encapsulamiento:** proteje los detalles de implementación de la estrcutura de datos al proveer una interfaz para acceder a los datos.
 - **Reutilización:** permite reeutilizar la logica de iteración en diferentes estrcuturas de datos, sin la necesidad de duplicar código.
 
+<img width="860" alt="Screen Shot 2023-01-29 at 21 56 18" src="https://user-images.githubusercontent.com/16981896/215366940-d573607a-7113-4b55-be3f-0e6febcb4977.png">
+
+
 ## GUIA
 ![guia_uml](https://user-images.githubusercontent.com/16981896/204416505-99a97310-5096-4677-8fe5-cfeb7815d002.png)
 
