@@ -125,7 +125,7 @@ Estas de vacaciones por Roma y quieres visitar varios sitios como por ejemplo: e
 ### Definicíon
 El patrón Iterator provee una forma bastante estandar de acceder a los elementos de una colección sin exponer su representación interna, lo hace recorriendo una colección y devuelve elemento por elemento es decir uno a uno.
 
-### Ventajas
+### Ventajas de su uso
 - **Abtracción:** permite abstraer la implementación de la estructura de los datos subyacentes y provee una forma facil de acceder a los datos.
 - **Encapsulamiento:** proteje los detalles de implementación de la estrcutura de datos al proveer una interfaz para acceder a los datos.
 - **Reutilización:** permite reeutilizar la logica de iteración en diferentes estrcuturas de datos, sin la necesidad de duplicar código.
