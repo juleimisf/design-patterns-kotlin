@@ -125,6 +125,9 @@ Suponga que es su primer dia en una pizzeria, sus compañeros cada dia crean dif
 ### 7.Iterator
 Estas de vacaciones por Roma y quieres visitar varios sitios como por ejemplo: el Coliseo Romano, la Fontana de Trevi, El Vaticano, etc para ello contratas un chofer esto,para qye sea mucho mas facil y comodo visitar cada uno de estos lugares. En este caso el conductor o chofer hace de Iterator y cada uno de los lugares actuan como los elementos a recorrer, ya que el chofer sabe como llegar a cada destinao y como acceder a cada uno de ellos. El cliente que uso el Iterator no se preocupa de que forma ni como hace el recorrido.
 
+## Definicíon
+El patrón Iterator provee una forma bastante estandar de acceder a los elementos de una colección sin exponer su representación interna, lo hace recorriendo una colección y devuelve elemento por elemento es decir uno a uno.
+
 ## GUIA
 ![guia_uml](https://user-images.githubusercontent.com/16981896/204416505-99a97310-5096-4677-8fe5-cfeb7815d002.png)
 
