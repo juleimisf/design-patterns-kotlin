@@ -117,10 +117,27 @@ Suponga que es su primer dia en una pizzeria, sus compañeros cada dia crean dif
 - **Modificable:** permite hacer cambios sobre un algoritmo en especifico sin tener que cambiar el código existente.
 - **Adaptable:** haciendo uso de este patrón podemos crear jerarquias de clases que se adapten a diferentes escenarios sin la necesidad de escribir código adicional. 
 
-
-Suponga que es su primer dia en una pizzeria, sus compañeros cada dia crean diferentes tipos de pizzas Margarita, vegetariana, Peperoni, etc, donde cada una de ellos siguen el mismo proceso general que es mezclar los ingredientes para la masa, amasar, colococarlos los topping y hornear sin embargo cada tipo de pizza varian un poco en sus ingredientes o tiempo de cocción, el patron template es similar proporciona una estructura para un proceso o algoritmo pero permite que detalles especifcos sean implementados por las subclases.
-
 <img width="702" alt="Screen Shot 2023-01-27 at 20 24 03" src="https://user-images.githubusercontent.com/16981896/215224371-b0c34171-8b25-4ac3-8520-72977e074c8a.png">
+
+## 7.Iterator
+Estas de vacaciones por Roma y quieres visitar varios sitios como por ejemplo: el Coliseo Romano, la Fontana de Trevi, El Vaticano, etc para ello contratas un chofer esto,para qye sea mucho mas facil y comodo visitar cada uno de estos lugares. En este caso el conductor o chofer hace de Iterator y cada uno de los lugares actuan como los elementos a recorrer, ya que el chofer sabe como llegar a cada destinao y como acceder a cada uno de ellos. El cliente que uso el Iterator no se preocupa de que forma ni como hace el recorrido.
+
+### Definicíon
+El patrón Iterator provee una forma bastante estandar de acceder a los elementos de una colección sin exponer su representación interna, lo hace recorriendo una colección y devuelve elemento por elemento es decir uno a uno.
+
+### Ventajas de su uso
+- **Abtracción:** permite abstraer la implementación de la estructura de los datos subyacentes y provee una forma facil de acceder a los datos.
+- **Encapsulamiento:** proteje los detalles de implementación de la estrcutura de datos al proveer una interfaz para acceder a los datos.
+- **Reutilización:** permite reeutilizar la logica de iteración en diferentes estrcuturas de datos, sin la necesidad de duplicar código.
+
+### Deninición de cada elemento
+
+- **Iterador:** aca se especifican cada uno de los metodos que debe implementar el iterator.
+- **ConcreteIterator:** implementa la interfaz Iterator manteniendo una referencia a la colección de estructura de datos.
+- **Aggregate:** aca se especifican los metodos de deben proporcionar una colección de datos.
+- **ConcreteAggregate:** implementa la interfaz Aggreagate y proporciona una implementación para obtener un Iterator y acceder a los elementos
+
+<img width="860" alt="Screen Shot 2023-01-29 at 21 56 18" src="https://user-images.githubusercontent.com/16981896/215366940-d573607a-7113-4b55-be3f-0e6febcb4977.png">
 
 
 ## GUIA
