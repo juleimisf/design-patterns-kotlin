@@ -1,10 +1,10 @@
-package iterator
+package iterator.simpleExample
 
 class ConcreteIterator<T>(private val items: List<T>) : Iterator<T> {
     private var index = 0
     override fun next(): T {
         if (hasNext()) {
-            return items[index]
+            return items[index++]
         } else {
             throw NoSuchElementException()
         }
