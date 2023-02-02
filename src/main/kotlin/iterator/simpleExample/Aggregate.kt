@@ -1,5 +1,5 @@
 package iterator.simpleExample
 
-interface Collection<T> {
+interface Aggregate<T> {
     fun createIterator(): Iterator<T>
 }

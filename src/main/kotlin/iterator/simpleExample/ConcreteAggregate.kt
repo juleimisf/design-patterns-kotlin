@@ -1,5 +1,5 @@
 package iterator.simpleExample
 
-class ConcreteCollection<T>(private val items: List<T>) : Collection<T> {
+class ConcreteAggregate<T>(private val items: List<T>) : Aggregate<T> {
     override fun createIterator() = ConcreteIterator(items)
 }

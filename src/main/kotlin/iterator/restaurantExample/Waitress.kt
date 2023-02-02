@@ -1,8 +1,8 @@
 package iterator.restaurantExample
 
+import iterator.restaurantExample.model.MenuItem
 import kotlin.collections.Iterator
-
-class Waitress(private val pancakeHouseMenu: PancakeHouseMenu, private val dinerMenu: DinerMenu) {
+class Waitress(private val pancakeHouseMenu: ConcreteAggregatePancakeHouseMenu, private val dinerMenu: ConcreteAggregateDinerMenu) {
     fun printMenu() {
 
         val pancakeIterator= pancakeHouseMenu.createIterator()

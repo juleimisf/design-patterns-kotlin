@@ -1,14 +1,16 @@
 package iterator.restaurantExample
 
+import iterator.restaurantExample.model.MenuItem
+
 fun main(){
-    val pancakeHouseMenu = PancakeHouseMenu(arrayListOf(
+    val pancakeHouseMenu = ConcreteAggregatePancakeHouseMenu(arrayListOf(
         MenuItem("K&B's Pancake Breakfast", "Pancakes with scrambled eggs, and toast", true, 2.99),
         MenuItem("Regular Pancake Breakfast", "Pancakes with fried eggs, sausage", false, 2.99),
         MenuItem("Blueberry Pancakes", "Pancakes made with fresh blueberries", true, 3.49),
         MenuItem("Waffles", "Waffles, with your choice of blueberries or strawberries", true, 3.59)
     ))
 
-    val dinerMenu = DinerMenu(arrayOf(
+    val dinerMenu = ConcreteAggregateDinerMenu(arrayOf(
         MenuItem("Vegetarian BLT", "(Fakin') Bacon with lettuce & tomato on whole wheat", true, 2.99),
         MenuItem("BLT", "Bacon with lettuce & tomato on whole wheat", false, 2.99),
         MenuItem("Soup of the day", "Soup of the day, with a side of potato salad", false, 3.29),

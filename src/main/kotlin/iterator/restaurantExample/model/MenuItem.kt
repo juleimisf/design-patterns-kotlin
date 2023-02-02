@@ -1,4 +1,4 @@
-package iterator.restaurantExample
+package iterator.restaurantExample.model
 
 data class MenuItem(
     val name: String,

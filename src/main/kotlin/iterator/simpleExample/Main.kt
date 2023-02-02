@@ -6,7 +6,7 @@ fun main() {
     val listNumber = listOf(1, 2, 3, 4, 5)
     val listObjects = listOf(obj, obj, obj)
 
-    val aggregate = ConcreteCollection(listObjects)
+    val aggregate = ConcreteAggregate(listObjects)
     val iterator = aggregate.createIterator()
     while (iterator.hasNext()) {
         println(iterator.next())
