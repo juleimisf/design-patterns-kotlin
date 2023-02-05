@@ -17,6 +17,10 @@ fun main(){
         MenuItem("Hotdog", "A hot dog, with saurkraut, relish, onions, topped with cheese", false, 3.05)
     ))
 
-    val waitress = Waitress(pancakeHouseMenu, dinerMenu)
+    val cafeMenu = ConcreteCafeMenu(arrayOf(
+        MenuItem("Tacos", "Nothing", true, 5.99),
+    ))
+
+    val waitress = Waitress(pancakeHouseMenu, dinerMenu, cafeMenu)
     waitress.printMenu()
 }
