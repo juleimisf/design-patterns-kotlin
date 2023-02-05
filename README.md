@@ -162,6 +162,13 @@ El patron Composite define una forma bastante eficaz de modelas estructuras jera
 
 Cualquier sistema que requiera una modelación de estructura jerarjicas se puede beneficiar de este patron lo que facilita mucho el diseño y la implementación del código.
 
+<img width="586" alt="Screen Shot 2023-02-05 at 18 13 22" src="https://user-images.githubusercontent.com/16981896/216846482-cd44a469-ab95-4634-9f12-777ad1462bb6.png">
+
+#### Definición de cada elemento
+- Component: define todos los metodos comunes que deben ser implementados por los componentes o objetos (simples o complejos).
+- Leaf: esta clase implementa la interfaz Component y representa un objetos terminal. Terminal se refieres a que este un objeto es el ultimo nicel de estructura y no se puede subdivir en partes mas pequeñas.
+- Composite: es una clase que implementa la interfaz Component y a diferencia de Leaf esta puede contener mas componente dentro de él.
+
 
 ## GUIA
 ![guia_uml](https://user-images.githubusercontent.com/16981896/204416505-99a97310-5096-4677-8fe5-cfeb7815d002.png)
