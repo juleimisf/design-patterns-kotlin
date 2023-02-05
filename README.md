@@ -155,6 +155,13 @@ El patron Composite define una forma bastante eficaz de modelas estructuras jera
 - Reutilización del código: definiendo una única interfaz para todos se puede reutilizar para objetos simples y complejos.
 - Flexibilidad : con este patron puede quitar o agregar objetos en tiempo de ejecución sin ningun problema, lo que permite ajustar la estructura en uso egun las necesidades.
 
+#### Aplicaciones
+- Interfaces: para crear una estructura de componentes que represente la interfaz de usuario, menú, botones, formularios, etc.
+- Arboles de direcciones: se puede utilizar para modelar estructuras de directorios de archivos.
+- Juegos: se utiliza para crear estructuras de objetos en juegos como son niveles, personales, objetos, etc.
+
+Cualquier sistema que requiera una modelación de estructura jerarjicas se puede beneficiar de este patron lo que facilita mucho el diseño y la implementación del código.
+
 
 ## GUIA
 ![guia_uml](https://user-images.githubusercontent.com/16981896/204416505-99a97310-5096-4677-8fe5-cfeb7815d002.png)
