@@ -143,6 +143,10 @@ El patrón Iterator es una manera simple y eficiente de recorrer elementos de un
 
 <img width="860" alt="Screen Shot 2023-01-29 at 21 56 18" src="https://user-images.githubusercontent.com/16981896/215366940-d573607a-7113-4b55-be3f-0e6febcb4977.png">
 
+## 8.Composite
+
+Imagina que en un arbol genealogico hay varios individuos que representan objectos simples y complejos. Por ejemplo una personal puede considerarrse coo un objetos simple mientras que una familia entera es un objeto complejo que a su vez contine a varias personas. Si quieres calcular la cantidad de personasl individuales incluyendo a las familias dentro de este arbol genealogico, se puede hacer uso de una interfaz
+
 
 ## GUIA
 ![guia_uml](https://user-images.githubusercontent.com/16981896/204416505-99a97310-5096-4677-8fe5-cfeb7815d002.png)
