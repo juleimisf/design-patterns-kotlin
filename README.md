@@ -145,7 +145,15 @@ El patrón Iterator es una manera simple y eficiente de recorrer elementos de un
 
 ## 8.Composite
 
-Imagina que en un arbol genealogico hay varios individuos que representan objectos simples y complejos. Por ejemplo una personal puede considerarrse coo un objetos simple mientras que una familia entera es un objeto complejo que a su vez contine a varias personas. Si quieres calcular la cantidad de personasl individuales incluyendo a las familias dentro de este arbol genealogico, se puede hacer uso de una interfaz
+Imagina que en un arbol genealogico hay varios individuos que representan objectos simples y complejos. Por ejemplo una personal puede considerarrse coo un objetos simple mientras que una familia entera es un objeto complejo que a su vez contine a varias personas. Si quieres calcular la cantidad de personasl individuales incluyendo a las familias dentro de este arbol genealogico, se puede hacer uso de una interfaz comun para todos los objetos asi se trata tanto a los objetos simples como complejos de la misma manera.
+
+#### Definición 
+El patron Composite define una forma bastante eficaz de modelas estructuras jerarjicas y tratar a los objetos simple como complejos de la misma forma es decir de forma uniforme.
+
+#### ¿Por qué elegir este patrón?
+- Abstracción: permite abstraer los detalles de implementación de los objetos simple y complejos, facilitando de esta forma la mantebilidad y escabilidad del código.
+- Reutilización del código: definiendo una única interfaz para todos se puede reutilizar para objetos simples y complejos.
+- Flexibilidad : con este patron puede quitar o agregar objetos en tiempo de ejecución sin ningun problema, lo que permite ajustar la estructura en uso egun las necesidades.
 
 
 ## GUIA
