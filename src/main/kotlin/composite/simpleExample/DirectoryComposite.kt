@@ -1,4 +1,4 @@
-package composite
+package composite.simpleExample
 
 class DirectoryComposite(private val components: MutableList<FileSystemComponent> = mutableListOf()) :
     FileSystemComponent {
