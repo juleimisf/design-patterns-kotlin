@@ -143,6 +143,32 @@ El patrón Iterator es una manera simple y eficiente de recorrer elementos de un
 
 <img width="860" alt="Screen Shot 2023-01-29 at 21 56 18" src="https://user-images.githubusercontent.com/16981896/215366940-d573607a-7113-4b55-be3f-0e6febcb4977.png">
 
+## 8. Composite
+
+Imagina que en un arbol genealogico hay varios individuos que representan objectos simples y complejos. Por ejemplo una personal puede considerarrse coo un objetos simple mientras que una familia entera es un objeto complejo que a su vez contine a varias personas. Si quieres calcular la cantidad de personasl individuales incluyendo a las familias dentro de este arbol genealogico, se puede hacer uso de una interfaz comun para todos los objetos asi se trata tanto a los objetos simples como complejos de la misma manera.
+
+#### Definición 
+El patron Composite define una forma bastante eficaz de modelas estructuras jerarjicas y tratar a los objetos simple como complejos de la misma forma es decir de forma uniforme.
+
+#### ¿Por qué elegir este patrón?
+- Abstracción: permite abstraer los detalles de implementación de los objetos simple y complejos, facilitando de esta forma la mantebilidad y escabilidad del código.
+- Reutilización del código: definiendo una única interfaz para todos se puede reutilizar para objetos simples y complejos.
+- Flexibilidad : con este patron puede quitar o agregar objetos en tiempo de ejecución sin ningun problema, lo que permite ajustar la estructura en uso egun las necesidades.
+
+#### Aplicaciones
+- Interfaces: para crear una estructura de componentes que represente la interfaz de usuario, menú, botones, formularios, etc.
+- Arboles de direcciones: se puede utilizar para modelar estructuras de directorios de archivos.
+- Juegos: se utiliza para crear estructuras de objetos en juegos como son niveles, personales, objetos, etc.
+
+Cualquier sistema que requiera una modelación de estructura jerarjicas se puede beneficiar de este patron lo que facilita mucho el diseño y la implementación del código.
+
+<img width="586" alt="Screen Shot 2023-02-05 at 18 13 22" src="https://user-images.githubusercontent.com/16981896/216846482-cd44a469-ab95-4634-9f12-777ad1462bb6.png">
+
+#### Definición de cada elemento
+- Component: define todos los metodos comunes que deben ser implementados por los componentes o objetos (simples o complejos).
+- Leaf: esta clase implementa la interfaz Component y representa un objetos terminal. Terminal se refieres a que este un objeto es el ultimo nicel de estructura y no se puede subdivir en partes mas pequeñas.
+- Composite: es una clase que implementa la interfaz Component y a diferencia de Leaf esta puede contener mas componente dentro de él.
+
 
 ## GUIA
 ![guia_uml](https://user-images.githubusercontent.com/16981896/204416505-99a97310-5096-4677-8fe5-cfeb7815d002.png)
