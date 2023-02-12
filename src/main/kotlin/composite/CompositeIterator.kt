@@ -24,7 +24,6 @@ class CompositeIterator(iterator: Iterator<MenuComponent>) : Iterator<MenuCompon
     }
 
     fun remove() = UnsupportedOperationException()
-
     override fun next(): MenuComponent {
         return if (hasNext()) {
             val iterator = stack.peek()
