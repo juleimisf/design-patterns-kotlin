@@ -1,7 +1,7 @@
 
-# 🎨 Patrones de diseño en programación con Kotlin
+# 🔨  Patrones de diseño
 
-## ⚡ ¿Estás listo para llevar tus habilidades de programación al siguiente nivel? 
+⚡ ¿Estás listo para llevar tus habilidades de programación al siguiente nivel? 
 Este repositorio es el lugar perfecto para aprender sobre los patrones de diseño más utilizados en la programación, con enfoque en Kotlin. 
 
 💡 Descubre cómo solucionar problemas comunes y mejorar la calidad de tu código con la ayuda de ejemplos concretos de código, diagramas de clases y explicaciones detalladas de cada patrón. 
