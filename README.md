@@ -207,6 +207,11 @@ Para entender un poco mas este patron imagina que estas usando un maquina expend
 - State: es la interfaz que posee los metodos donde cada clase de estado debe implementar y asi definir el comportamiendo requerido.
 - Concrete State: son las clases que representan los diferentes estados y deben implemnetar la interfaz State.
 
+#### Beneficios de usar este patron
+- Simplicidad: permite tener una logica bastante separada para cada estado lo que hace que sea mucho mas facil de entender y mantener.
+- Flixibilidad: al tener la logica separada para cada estado, podemos de forma rapida y sencilla agragr nuevos estado sy comportamientos sin tener que cambiar la logica del objeto orincipal.
+- Organizacion: al mantener las clases separadas de cada estado, esto permite tener un codigo mas organizado y facil de entenderlo que haces mas simple su mantenimiento y depuración.
+
 
 ## GUIA
 ![guia_uml](https://user-images.githubusercontent.com/16981896/204416505-99a97310-5096-4677-8fe5-cfeb7815d002.png)
