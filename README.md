@@ -181,6 +181,13 @@ Cualquier sistema que requiera una modelación de estructura jerarjicas se puede
 - Composite: es una clase que implementa la interfaz Component y a diferencia de Leaf esta puede contener mas componente dentro de él.
 
 
+# State
+
+Este patron es util para manejar comportamiento diferentes de un objeto en funcion de su estado actual lo que ayuda mucho a mejorar la legibilidad y mantebilidad del códio.
+
+Para entender un poco mas este patron imagina que estas usando un maquina expendedora de bebidas, esta maquina puede estar en un estado determinado en un momento determinado, estos estados podrian ser por ejemplo: "esperando ingreso de efectivo", "expediendo bebida", "mostrar un mensaje de error". Con esto, podemos entender que los objetos de un programa pueden tener varios estados y comportamientas asociados a esos estados. Si cambia de un estado a otro el comportamiento tambien cambia.
+
+
 ## GUIA
 ![guia_uml](https://user-images.githubusercontent.com/16981896/204416505-99a97310-5096-4677-8fe5-cfeb7815d002.png)
 
