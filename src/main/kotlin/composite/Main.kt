@@ -1,9 +1,5 @@
 package composite
 
-import iterator.restaurantExample.ConcreteAggregateDinerMenu
-import iterator.restaurantExample.ConcreteAggregatePancakeHouseMenu
-import iterator.restaurantExample.model.MenuItem
-
 fun main() {
 
     val pancakeHouseMenu = MenuComposite(name = "PANCAKE HOUSE MENU", description = "Breakfast")
