@@ -1,3 +1,14 @@
+
+# 🔨  Patrones de diseño
+
+⚡ ¿Estás listo para llevar tus habilidades de programación al siguiente nivel? 
+Este repositorio es el lugar perfecto para aprender sobre los patrones de diseño más utilizados en la programación, con enfoque en Kotlin. 
+
+💡 Descubre cómo solucionar problemas comunes y mejorar la calidad de tu código con la ayuda de ejemplos concretos de código, diagramas de clases y explicaciones detalladas de cada patrón. 
+
+🤓 Únete a la comunidad y comienza a aplicar estos patrones en tus propios proyectos hoy mismo. ¡El futuro de tu programación es ahora!
+
+
 Los patrones de diseño son soluciones estandarizadas a problemas que surgen en el desarrollo de programas. Estos patrones nos ayudan a estructurar el código de una manera que sea fácil de entender, de escalar y mantener. Existen diferentes categorias de patrones de diseño como por ejemplo:
 
 - **Estructurales:** son aquellos que se enfocan en como conectar y organizar objetos para lograr una funcionalidad en particular.
