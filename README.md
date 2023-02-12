@@ -203,9 +203,9 @@ Para entender un poco mas este patron imagina que estas usando un maquina expend
 
 #### Definición de cada elemento
 
-Context: posee un estado y se comportande de acuerdo a ese estado.
-State: es la interfaz que posee los metodos donde cada clase de estado debe implementar y asi definir el comportamiendo requerido.
-Concrete State: son las clases que representan los diferentes estados y deben implemnetar la interfaz State.
+- Context: posee un estado y se comportande de acuerdo a ese estado.
+- State: es la interfaz que posee los metodos donde cada clase de estado debe implementar y asi definir el comportamiendo requerido.
+- Concrete State: son las clases que representan los diferentes estados y deben implemnetar la interfaz State.
 
 
 ## GUIA
