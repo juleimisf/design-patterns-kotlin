@@ -181,6 +181,38 @@ Cualquier sistema que requiera una modelación de estructura jerarjicas se puede
 - Composite: es una clase que implementa la interfaz Component y a diferencia de Leaf esta puede contener mas componente dentro de él.
 
 
+# State
+
+Este patron es util para manejar comportamiento diferentes de un objeto en funcion de su estado actual lo que ayuda mucho a mejorar la legibilidad y mantebilidad del códio.
+
+Para entender un poco mas este patron imagina que estas usando un maquina expendedora de bebidas, esta maquina puede estar en un estado determinado en un momento determinado, estos estados podrian ser por ejemplo: "esperando ingreso de efectivo", "expediendo bebida", "mostrar un mensaje de error". Con esto, podemos entender que los objetos de un programa pueden tener varios estados y comportamientas asociados a esos estados. Si cambia de un estado a otro el comportamiento tambien cambia.
+
+#### Aplicaciones
+- Sistemas de pagos : por ejemplo un sistema de pagos puede manejar estado de "procesando", "exitoso" "rechazado", "error", "pendiente", entre otros, con el uso del patron State podmeos definir y modelar el compartamiento de cada uno de ellos, ya que son bastante flexibles podemos agrgar tanto nuevos estados como comportamiento sin afectar el sistema completo.
+- Maquina expendedora.
+- Juegos.
+
+#### Commo comenzar a aplicar el patron State?
+
+1. Lo primero que debemos hacer es identificar los diferentes estados que puede tener el objeto, se debe definir una clase para cada uno de ellos. Importante definir una clase comun para cada una de las clases para garantizar que cada uno de ellas implemente los metodos.
+2. Se debe difinir una clase Context que representa el objeto al que se le van a cambiar los estados, que debe mantener una referencia a una clase de estado inicial.
+3. La clase Context debe implementar los metodos que le permitiran cambiar de estado.
+4. En cada uno de las clases de estado debe defininir la logica correspondiente.
+
+<img width="503" alt="Screen Shot 2023-02-12 at 20 10 12" src="https://user-images.githubusercontent.com/16981896/218342930-6b872d53-3d78-4155-b0b8-cf946ab8fd83.png">
+
+#### Definición de cada elemento
+
+- Context: posee un estado y se comportande de acuerdo a ese estado.
+- State: es la interfaz que posee los metodos donde cada clase de estado debe implementar y asi definir el comportamiendo requerido.
+- Concrete State: son las clases que representan los diferentes estados y deben implemnetar la interfaz State.
+
+#### Beneficios de usar este patron
+- Simplicidad: permite tener una logica bastante separada para cada estado lo que hace que sea mucho mas facil de entender y mantener.
+- Flixibilidad: al tener la logica separada para cada estado, podemos de forma rapida y sencilla agragr nuevos estado sy comportamientos sin tener que cambiar la logica del objeto orincipal.
+- Organizacion: al mantener las clases separadas de cada estado, esto permite tener un codigo mas organizado y facil de entenderlo que haces mas simple su mantenimiento y depuración.
+
+
 ## GUIA
 ![guia_uml](https://user-images.githubusercontent.com/16981896/204416505-99a97310-5096-4677-8fe5-cfeb7815d002.png)
 
