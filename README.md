@@ -16,8 +16,10 @@ Los patrones de diseño son soluciones estandarizadas a problemas que surgen en 
 # Design-patterns-kotlin
 
 
-## 1. Strategy 
-Es un patron de comportamiendo, donde encapsulamos diferentes logicas, esto con la finalidad de poder intercambiar con mucha facilidad estos algoritmos en tiempo de ejecución. Las estrategias siempre se ejecutan dentro del mismo contexto.
+## Patrón de Diseño [Strategy]  
+El patrón Strategy se puede entender como tener diferentes herramientas en un kit de herramientas. Cada herramienta tiene una función específica, pero todas se pueden utilizar para realizar una tarea similar, como arreglar una bicicleta. Dependiendo de la tarea que necesites realizar en la bicicleta, puedes elegir la herramienta adecuada para el trabajo.
+
+De manera similar, el patrón Strategy se utiliza para proporcionar diferentes algoritmos o estrategias para realizar una tarea particular. Cada estrategia es una clase que implementa una interfaz común, lo que permite que las estrategias sean intercambiables. El contexto utiliza una de las estrategias para realizar la tarea según sea necesario.
 
 <img width="694" alt="Screen Shot 2022-11-24 at 23 16 38" src="https://user-images.githubusercontent.com/16981896/203886974-3f4e40cc-74d9-432f-8f65-5f4d77d8daaf.png">
 
