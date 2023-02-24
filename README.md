@@ -64,10 +64,13 @@ También llamado _wrapper pattern_ es un patrón de diseño estructural altament
 
 **2. Definición de cada elemento**
 
-- **Component:** aca se describen los comportamientos de los componentes y es lo que permite que tanto el objeto como los objetos envueltos se consideren del mismo tipo.
+- **Component:** acá se describen los comportamientos de los componentes y es lo que permite que tanto el objeto como los objetos envueltos se consideren del mismo tipo.
 - **Concrete component:** implementa la interfaz del componente.
-- **Decorator:** es una clase abstracta qu etambien implementa la interfaz del componente y tambien posee una instancia de esta iterfaz.
-- **Concrete decorator:** es una subclase de la clase abstracta Decorator donde se establecen los comportamiento para los objetos proporcionados.
+- **Decorator:** es una clase abstracta que también implementa la interfaz del componente y también posee una instancia de esta interfaz.
+- **Concrete decorator:** es una subclase de la clase abstracta Decorator donde se establecen los comportamientos para los objetos proporcionados.
+
+**3. Ejemplo de uso**
+El patrón Decorator se puede utilizar en muchas situaciones, como en la creación de interfaces gráficas de usuario, donde se pueden agregar funcionalidades adicionales a los componentes existentes, como etiquetas, botones y cuadros de texto. También se puede utilizar en la creación de filtros de imágenes, donde se pueden agregar efectos adicionales a las imágenes base.
 
 
 ## 3. Factory Method
