@@ -26,7 +26,7 @@ De manera similar, el patrón Strategy se utiliza para proporcionar diferentes a
 
 Permite a los objetos interesados en el estado de otro objeto recibir actualizaciones automáticamente sin tener que solicitarlas activamente. Esto puede ser útil en muchas situaciones, como en la actualización automática de una interfaz de usuario cuando se produce un cambio en los datos subyacentes.
 
-**¿Dónde puedo aplicarlo?**
+**1. ¿Dónde puedo aplicarlo?**
 En general, el patrón Observer es útil en cualquier situación en la que se necesite mantener sincronizados varios objetos que dependen del estado de un objeto sujeto. Por ejemplo:
 
 - **Actualización de datos:** El patrón Observer se utiliza a menudo en sistemas que necesitan actualizar los datos en tiempo real. Por ejemplo, en un sistema de seguimiento de flotas, se pueden tener varios vehículos que necesitan ser monitoreados constantemente en términos de su ubicación, estado y otras variables.
@@ -35,18 +35,20 @@ En general, el patrón Observer es útil en cualquier situación en la que se ne
 
 <img width="620" alt="Screen Shot 2022-11-25 at 22 26 06" src="https://user-images.githubusercontent.com/16981896/204067296-8b8fcdd8-9e90-4e77-895a-6e7cd81ce5f5.png">
 
+**2. Definición de cada elemento**
+
 - **Subject:** es el objeto que contiene el estado y notifica a los observadores cuando el estado cambia. El sujeto mantiene una lista de todos los observadores interesados en ser notificados..
 - **Observer:** es el objeto que desea recibir notificaciones sobre cambios en el estado del sujeto. Los observadores se registran en el sujeto para recibir notificaciones.
 - **ConcreteSubject:** registra a todos los observadores, y envia las notificaciones correspondientes a los subcriptores.
 - **ConcreteObserver:** mantiene una relación con el Observer para mostrar dichos cambios emitido por el Concrete Subject.
 
-**Ventajas de su uso**
+**3. Ventajas de su uso**
 
-1. Desacoplamiento: El patrón Observer se utiliza para desacoplar el sujeto (objeto que notifica) y los observadores (objetos que reciben la notificación). Esto significa que el sujeto y los observadores no tienen que conocer la existencia del otro. El sujeto simplemente notifica a los observadores interesados sin preocuparse por cómo se manejan las notificaciones en cada observador.
+- **Desacoplamiento:** El patrón Observer se utiliza para desacoplar el sujeto (objeto que notifica) y los observadores (objetos que reciben la notificación). Esto significa que el sujeto y los observadores no tienen que conocer la existencia del otro. El sujeto simplemente notifica a los observadores interesados sin preocuparse por cómo se manejan las notificaciones en cada observador.
 
-2. Escalabilidad: El patrón Observer es escalable, lo que significa que se pueden agregar o eliminar observadores fácilmente sin afectar el sujeto o los otros observadores. Los nuevos observadores pueden registrarse para recibir notificaciones y los observadores existentes pueden cancelar su registro sin afectar el funcionamiento general del patrón Observer.
+- **Escalabilidad:** El patrón Observer es escalable, lo que significa que se pueden agregar o eliminar observadores fácilmente sin afectar el sujeto o los otros observadores. Los nuevos observadores pueden registrarse para recibir notificaciones y los observadores existentes pueden cancelar su registro sin afectar el funcionamiento general del patrón Observer.
 
-3. Flexibilidad: El patrón Observer es flexible, lo que significa que se puede implementar en diferentes tipos de aplicaciones y con diferentes tipos de lenguajes de programación. Este patrón se utiliza en aplicaciones web, aplicaciones móviles, juegos y sistemas embebidos, por nombrar algunos ejemplos. Además, se puede implementar en diferentes lenguajes de programación como Java, Python, C++, entre otros.
+- **Flexibilidad:** El patrón Observer es flexible, lo que significa que se puede implementar en diferentes tipos de aplicaciones y con diferentes tipos de lenguajes de programación. Este patrón se utiliza en aplicaciones web, aplicaciones móviles, juegos y sistemas embebidos, por nombrar algunos ejemplos. Además, se puede implementar en diferentes lenguajes de programación como Java, Python, C++, entre otros.
 
 ## 3. Decorator 
 Tamnien llamado wrapper pattern es un patron de diseño estructural altamente conocido. Este patron nos permite exterder comportamientos de forma dinamica, es decir pemite agregar nuevos comportamientos y funcionalidades a objetos sin que estos alteren su esttructura original.
