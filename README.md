@@ -50,6 +50,8 @@ En general, el patrón Observer es útil en cualquier situación en la que se ne
 
 - **Flexibilidad:** El patrón Observer es flexible, lo que significa que se puede implementar en diferentes tipos de aplicaciones y con diferentes tipos de lenguajes de programación. Este patrón se utiliza en aplicaciones web, aplicaciones móviles, juegos y sistemas embebidos, por nombrar algunos ejemplos. Además, se puede implementar en diferentes lenguajes de programación como Java, Python, C++, entre otros.
 
+El patrón Observer es muy útil en el desarrollo de aplicaciones móviles en Kotlin, ya que permite una comunicación en tiempo real entre los distintos componentes de la aplicación, como ViewModel y Vista, por ejemplo. La implementación del patrón Observer en Kotlin es sencilla y flexible, lo que lo hace una excelente opción para aplicaciones móviles.
+
 ## 3. Decorator 
 Tamnien llamado wrapper pattern es un patron de diseño estructural altamente conocido. Este patron nos permite exterder comportamientos de forma dinamica, es decir pemite agregar nuevos comportamientos y funcionalidades a objetos sin que estos alteren su esttructura original.
 
