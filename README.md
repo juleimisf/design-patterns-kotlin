@@ -42,11 +42,11 @@ En general, el patrón Observer es útil en cualquier situación en la que se ne
 
 **Ventajas de su uso**
 
-1.Desacoplamiento: El patrón Observer se utiliza para desacoplar el sujeto (objeto que notifica) y los observadores (objetos que reciben la notificación). Esto significa que el sujeto y los observadores no tienen que conocer la existencia del otro. El sujeto simplemente notifica a los observadores interesados sin preocuparse por cómo se manejan las notificaciones en cada observador.
+1. Desacoplamiento: El patrón Observer se utiliza para desacoplar el sujeto (objeto que notifica) y los observadores (objetos que reciben la notificación). Esto significa que el sujeto y los observadores no tienen que conocer la existencia del otro. El sujeto simplemente notifica a los observadores interesados sin preocuparse por cómo se manejan las notificaciones en cada observador.
 
-2.Escalabilidad: El patrón Observer es escalable, lo que significa que se pueden agregar o eliminar observadores fácilmente sin afectar el sujeto o los otros observadores. Los nuevos observadores pueden registrarse para recibir notificaciones y los observadores existentes pueden cancelar su registro sin afectar el funcionamiento general del patrón Observer.
+2. Escalabilidad: El patrón Observer es escalable, lo que significa que se pueden agregar o eliminar observadores fácilmente sin afectar el sujeto o los otros observadores. Los nuevos observadores pueden registrarse para recibir notificaciones y los observadores existentes pueden cancelar su registro sin afectar el funcionamiento general del patrón Observer.
 
-3.Flexibilidad: El patrón Observer es flexible, lo que significa que se puede implementar en diferentes tipos de aplicaciones y con diferentes tipos de lenguajes de programación. Este patrón se utiliza en aplicaciones web, aplicaciones móviles, juegos y sistemas embebidos, por nombrar algunos ejemplos. Además, se puede implementar en diferentes lenguajes de programación como Java, Python, C++, entre otros.
+3. Flexibilidad: El patrón Observer es flexible, lo que significa que se puede implementar en diferentes tipos de aplicaciones y con diferentes tipos de lenguajes de programación. Este patrón se utiliza en aplicaciones web, aplicaciones móviles, juegos y sistemas embebidos, por nombrar algunos ejemplos. Además, se puede implementar en diferentes lenguajes de programación como Java, Python, C++, entre otros.
 
 ## 3. Decorator 
 Tamnien llamado wrapper pattern es un patron de diseño estructural altamente conocido. Este patron nos permite exterder comportamientos de forma dinamica, es decir pemite agregar nuevos comportamientos y funcionalidades a objetos sin que estos alteren su esttructura original.
