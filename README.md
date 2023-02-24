@@ -11,11 +11,6 @@ Los patrones de diseño son soluciones estandarizadas a problemas que surgen en 
 - **Estructurales:** son aquellos que se enfocan en como conectar y organizar objetos para lograr una funcionalidad en particular.
 - **De comportamiento:** se enfoca en como los objetos de comunican e interactuan entre si.
 
-
-<img width="400" alt="Screen Shot 2022-12-15 at 00 02 05" src="https://user-images.githubusercontent.com/16981896/207762533-84cc2199-2e7e-42b1-bfc2-c7c09c5ad593.png">
-# Design-patterns-kotlin
-
-
 ## Strategy  
 El patrón Strategy se puede entender como tener diferentes herramientas en un kit de herramientas. Cada herramienta tiene una función específica, pero todas se pueden utilizar para realizar una tarea similar, como arreglar una bicicleta. Dependiendo de la tarea que necesites realizar en la bicicleta, puedes elegir la herramienta adecuada para el trabajo.
 
