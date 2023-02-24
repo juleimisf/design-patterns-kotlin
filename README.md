@@ -52,13 +52,18 @@ En general, el patrón Observer es útil en cualquier situación en la que se ne
 
 El patrón Observer es muy útil en el desarrollo de aplicaciones móviles en Kotlin, ya que permite una comunicación en tiempo real entre los distintos componentes de la aplicación, como ViewModel y Vista, por ejemplo. La implementación del patrón Observer en Kotlin es sencilla y flexible, lo que lo hace una excelente opción para aplicaciones móviles.
 
-## 3. Decorator 
-Tamnien llamado wrapper pattern es un patron de diseño estructural altamente conocido. Este patron nos permite exterder comportamientos de forma dinamica, es decir pemite agregar nuevos comportamientos y funcionalidades a objetos sin que estos alteren su esttructura original.
+## Decorator
+
+También llamado _wrapper pattern_ es un patrón de diseño estructural altamente conocido. Este patrón nos permite extender comportamientos de forma dinámica, es decir permite agregar nuevos comportamientos y funcionalidades a objetos sin que estos alteren su estructura original.
+
+**1. ¿Por qué usarlo?**
+- Si buscar aplicar el principio abierto-cerrado este patrón es una buena opción, ya que promueve la extensión sobre la modificación.
+- Si busca aplicar el principio de responsabilidad única el patrón _decotator_ es una excelente opción, pues, este principio indica que una clase debería realizar una única cosa y es lo que hace este patrón, los decoradores son colocados en clases separadas y que esta envuelva a la clase original.
 
 <img width="926" alt="Screen Shot 2022-11-28 at 22 19 59" src="https://user-images.githubusercontent.com/16981896/204414934-9a5f3dfd-c735-4e69-b3bc-7e2fc64e2a56.png">
 
-- Si buscar aplicar el principio abiertp-cerrado este patron es una buena opción, ya que promueve la extension sobre la modificación.
-- Si busca aplicar el principio de responsabilidad unica el patron decotator es una exelente opción, pues, este principio indica que una clase deberia realizar una unica cosa y es lo que hace este patron, los decoradores son colocados en clases separadas y que esta envuelva a la clase original.
+**2. Definición de cada elemento**
+
 - **Component:** aca se describen los comportamientos de los componentes y es lo que permite que tanto el objeto como los objetos envueltos se consideren del mismo tipo.
 - **Concrete component:** implementa la interfaz del componente.
 - **Decorator:** es una clase abstracta qu etambien implementa la interfaz del componente y tambien posee una instancia de esta iterfaz.
