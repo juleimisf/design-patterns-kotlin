@@ -16,27 +16,42 @@ Los patrones de diseño son soluciones estandarizadas a problemas que surgen en 
 # Design-patterns-kotlin
 
 
-## Patrón de Diseño [Strategy]  
+## Strategy  
 El patrón Strategy se puede entender como tener diferentes herramientas en un kit de herramientas. Cada herramienta tiene una función específica, pero todas se pueden utilizar para realizar una tarea similar, como arreglar una bicicleta. Dependiendo de la tarea que necesites realizar en la bicicleta, puedes elegir la herramienta adecuada para el trabajo.
 
 De manera similar, el patrón Strategy se utiliza para proporcionar diferentes algoritmos o estrategias para realizar una tarea particular. Cada estrategia es una clase que implementa una interfaz común, lo que permite que las estrategias sean intercambiables. El contexto utiliza una de las estrategias para realizar la tarea según sea necesario.
 
 <img width="694" alt="Screen Shot 2022-11-24 at 23 16 38" src="https://user-images.githubusercontent.com/16981896/203886974-3f4e40cc-74d9-432f-8f65-5f4d77d8daaf.png">
 
-- **Strategy:**  es una interfaz que es extendidas por los diferentes algotitmos. Dond el **Contexto** puede llamarla por medio de un **ConcreteStrategy** dentro de ella se define uno o varios metodos que seran utilizados por los algoritmos dentro de los **ConcreteStrategy**.
-- **Context:**  Mantiene una referencia de Strategy y selecciona que tipo ConcreteStrategy utilizar.
-- **ConcreteStrategy**  implemente la interfaz Strategy y desarrolla el algoritmo.
+- **Strategy:** es una interfaz que es extendida por los diferentes algoritmos. Donde el **Contexto** puede llamarla por medio de un **ConcreteStrategy** dentro de ella se define uno o varios métodos que serán utilizados por los algoritmos dentro de los **ConcreteStrategy**.
+- **Context:** mantiene una referencia de Strategy y selecciona que tipo ConcreteStrategy utilizar.
+- **ConcreteStrategy:** implemente la interfaz Strategy y desarrolla el algoritmo.
 
-## 2. Observer 
+## Observer 
 
-Es un patron de comportamiento el cual establece una relación de 1 a muchos, el objeto(observadores o publicadores) en el momento que haya cambiado su estado, se encarga de notificar de forma automatica a sus objetos que estan subescritos a él (suscriptores).
+Permite a los objetos interesados en el estado de otro objeto recibir actualizaciones automáticamente sin tener que solicitarlas activamente. Esto puede ser útil en muchas situaciones, como en la actualización automática de una interfaz de usuario cuando se produce un cambio en los datos subyacentes.
+
+**¿Dónde puedo aplicarlo?**
+En general, el patrón Observer es útil en cualquier situación en la que se necesite mantener sincronizados varios objetos que dependen del estado de un objeto sujeto. Por ejemplo:
+
+- **Actualización de datos:** El patrón Observer se utiliza a menudo en sistemas que necesitan actualizar los datos en tiempo real. Por ejemplo, en un sistema de seguimiento de flotas, se pueden tener varios vehículos que necesitan ser monitoreados constantemente en términos de su ubicación, estado y otras variables.
+- **Sistema de notificaciones:** En este caso, el objeto sujeto podría ser una conversación entre dos usuarios, y los objetos observadores podrían ser los usuarios que participan en esa conversación. Cuando uno de los usuarios envía un mensaje en la conversación, el patrón Observer notifica automáticamente a los otros usuarios que están participando en la conversación.
+- **Interfaces de usuario:** El patrón Observer es muy utilizado en interfaces de usuario para mantener sincronizados los datos del modelo y la vista. Cuando se produce un cambio en el modelo, se notifica automáticamente a la vista para que se actualice.
 
 <img width="620" alt="Screen Shot 2022-11-25 at 22 26 06" src="https://user-images.githubusercontent.com/16981896/204067296-8b8fcdd8-9e90-4e77-895a-6e7cd81ce5f5.png">
 
-- **Subject:** se define la lista de observadores, seguido de los metodos de subcripción y desubcripción.
-- **Observer:** interfaz que se encarga de definir uno o varios metodos que implementarán los subcriptores.
+- **Subject:** es el objeto que contiene el estado y notifica a los observadores cuando el estado cambia. El sujeto mantiene una lista de todos los observadores interesados en ser notificados..
+- **Observer:** es el objeto que desea recibir notificaciones sobre cambios en el estado del sujeto. Los observadores se registran en el sujeto para recibir notificaciones.
 - **ConcreteSubject:** registra a todos los observadores, y envia las notificaciones correspondientes a los subcriptores.
-- **ConcreteObserver:** Mantiene una relación con el Observer para mostrar dichos cambios emitido por el Concrete Subject.
+- **ConcreteObserver:** mantiene una relación con el Observer para mostrar dichos cambios emitido por el Concrete Subject.
+
+**Ventajas de su uso**
+
+1.Desacoplamiento: El patrón Observer se utiliza para desacoplar el sujeto (objeto que notifica) y los observadores (objetos que reciben la notificación). Esto significa que el sujeto y los observadores no tienen que conocer la existencia del otro. El sujeto simplemente notifica a los observadores interesados sin preocuparse por cómo se manejan las notificaciones en cada observador.
+
+2.Escalabilidad: El patrón Observer es escalable, lo que significa que se pueden agregar o eliminar observadores fácilmente sin afectar el sujeto o los otros observadores. Los nuevos observadores pueden registrarse para recibir notificaciones y los observadores existentes pueden cancelar su registro sin afectar el funcionamiento general del patrón Observer.
+
+3.Flexibilidad: El patrón Observer es flexible, lo que significa que se puede implementar en diferentes tipos de aplicaciones y con diferentes tipos de lenguajes de programación. Este patrón se utiliza en aplicaciones web, aplicaciones móviles, juegos y sistemas embebidos, por nombrar algunos ejemplos. Además, se puede implementar en diferentes lenguajes de programación como Java, Python, C++, entre otros.
 
 ## 3. Decorator 
 Tamnien llamado wrapper pattern es un patron de diseño estructural altamente conocido. Este patron nos permite exterder comportamientos de forma dinamica, es decir pemite agregar nuevos comportamientos y funcionalidades a objetos sin que estos alteren su esttructura original.
