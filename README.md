@@ -121,6 +121,10 @@ Este patron se puede pensar como una fábrica de coches, donde hay varias fábri
 
 En conclusion, el patrón Abstract Factory es útil en cualquier situación en la que se necesite crear familias de objetos relacionados entre sí y se quiera ocultar la complejidad de su creación y relación al cliente.
 
+5. Diferencia entre Factory Method y Abstract Factory
+
+El patrón Factory Method se enfoca en crear objetos de una sola familia de productos, mientras que el patrón Abstract Factory se enfoca en crear familias enteras de objetos relacionados.
+
 ## 5. Singleton
 Este es un patron creacional y su función principal es crear una unica instancia de una clase y q ue esta tenga un acceso goblal. Este quizá sea una de los patrones mas faciles de implementar pero hay que tener sumo cuidado de no abusar del mismo. Es ideal que el constructor no sea publico y que el cliente solo tenga acceso a la obtención de la instancia.
 
