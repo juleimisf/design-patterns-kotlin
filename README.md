@@ -90,13 +90,36 @@ Cuando puedo usar este patron?
 - **Concrete Factory:** se encarga de devolver nuevos objetos diferentes, anulando el metedoto base del **factory**
 
 ## 4. Abstract Factory
-Este patron se encarga de crear otras fabricas y proporciona una de las mejores formas de crear un objeto es decir nos permite crear familias de productos. Al igual que el patron Factory Method tambien es considerado un patron de creacion.
+
+1. Definicion: El patrón de diseño Abstract Factory es un patrón creacional que proporciona una interfaz para crear familias de objetos relacionados sin especificar su clase concreta. Es decir, permite crear objetos de diferentes tipos relacionados entre sí, sin conocer la implementación específica de cada uno. Esto permite que la aplicación sea más flexible y escalable, ya que los objetos pueden ser intercambiados sin afectar al resto del sistema.
+
+Este patron se puede pensar como una fábrica de coches, donde hay varias fábricas de coches (fábricas concretas) que producen diferentes tipos de coches (productos concretos). Cada fábrica de coches tiene su propia línea de producción especializada en ciertos tipos de coches. Por ejemplo, una fábrica puede producir coches deportivos mientras que otra puede producir coches familiares.
+
+2. Ventajas de su uso
+
+- Proporciona una forma de crear objetos relacionados sin especificar sus clases concretas. Esto permite desacoplar el código cliente de la creación de objetos, lo que facilita la modificación y extensión del sistema.
+
+- Permite intercambiar fácilmente entre diferentes familias de objetos, ya que cada fábrica concreta implementa una interfaz común para crear objetos abstractos. Esto hace que el código sea más flexible y fácil de mantener.
+
+- Favorece el principio de "abrir/cerrar" (Open/Closed), que es uno de los principios fundamentales de la programación orientada a objetos. Esto significa que el código es abierto para extensión, pero cerrado para modificación, lo que hace que sea más fácil añadir nuevas funcionalidades al sistema sin tener que modificar el código existente.
+
+- Promueve la coherencia y la consistencia en el diseño de la aplicación. Al utilizar el patrón Abstract Factory, se asegura que todos los objetos creados por una fábrica concreta pertenecen a la misma familia y tienen una coherencia y consistencia en su diseño.
 
 <img width="769" alt="Screen Shot 2022-12-10 at 19 16 25" src="https://user-images.githubusercontent.com/16981896/206877361-ccd79c4c-6fef-4c89-9bc7-13c15498abcf.png">
 
-- **Abstract Factory:** es una interfaz que define varios metodos para la creación de los objetos.
-- **Concrete Factory:** se encarga de implemnetar metodos de la clase **Abstract Factory** es decir los diferentes tipos de familia de productos.
-- **Abstract Product:** procude un conjunto de productos.
+3. Definición de cada elemento
+- **Abstract Factory:** es la interfaz que define los métodos que deben implementar las fábricas concretas para crear productos abstractos. Por ejemplo, en una fábrica de coches, la fábrica abstracta podría tener métodos para crear coches deportivos o coches familiares.
+- **Concrete Factory:** es la clase que implementa la interfaz de la fábrica abstracta y proporciona la implementación concreta de los métodos para crear productos concretos. Por ejemplo, en una fábrica de coches, una fábrica concreta podría crear coches deportivos o coches familiares.
+- **Abstract Product:** es la interfaz que define los métodos que deben implementar los productos concretos que se van a crear. Por ejemplo, en una fábrica de coches, el producto abstracto podría ser "coche" y los métodos definirían características como el número de puertas, la capacidad de los asientos, etc.
+- **Client:** es el objeto que utiliza los productos creados por la fábrica abstracta. El cliente no conoce las clases concretas de los productos, sino que utiliza los productos a través de la interfaz del producto abstracto y la fábrica abstracta.
+- **Object:** es la clase que implementa la interfaz del producto abstracto y proporciona la implementación concreta de los métodos. Por ejemplo, en una fábrica de coches, el producto concreto podría ser "coche deportivo" o "coche familiar".
+
+4. ¿Cuando usar este patron? Cuando se necesitan crear objetos que tengan una interfaz común, pero que varíen en la implementación.
+- Cuando se necesitan crear objetos que estén relacionados entre sí, como por ejemplo diferentes tipos de objetos que interactúan entre sí en un juego.
+- Cuando se desea ocultar la complejidad de la creación de objetos al cliente, por ejemplo al crear diferentes implementaciones de un objeto a partir de una fábrica abstracta sin que el cliente necesite conocer los detalles de cada implementación.
+- Cuando se desea cambiar dinámicamente la familia de objetos creados, lo que permite una mayor flexibilidad en el diseño del software.
+
+En conclusion, el patrón Abstract Factory es útil en cualquier situación en la que se necesite crear familias de objetos relacionados entre sí y se quiera ocultar la complejidad de su creación y relación al cliente.
 
 ## 5. Singleton
 Este es un patron creacional y su función principal es crear una unica instancia de una clase y q ue esta tenga un acceso goblal. Este quizá sea una de los patrones mas faciles de implementar pero hay que tener sumo cuidado de no abusar del mismo. Es ideal que el constructor no sea publico y que el cliente solo tenga acceso a la obtención de la instancia.
