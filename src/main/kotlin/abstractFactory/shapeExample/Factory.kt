@@ -1,4 +1,4 @@
-package patternAbstractFactory.shapeExample
+package abstractFactory.shapeExample
 
 abstract class Factory {
     abstract fun getShape() : Shape?

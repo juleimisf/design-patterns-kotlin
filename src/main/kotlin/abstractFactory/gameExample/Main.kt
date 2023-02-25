@@ -1,7 +1,7 @@
-package patternAbstractFactory
+package abstractFactory
 
-import patternAbstractFactory.gameExample.DesertFactory
-import patternAbstractFactory.gameExample.ForestFactory
+import abstractFactory.gameExample.DesertFactory
+import abstractFactory.gameExample.ForestFactory
 
 fun main(args: Array<String>) {
     val desert = DesertFactory()

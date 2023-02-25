@@ -1,4 +1,4 @@
-package patternAbstractFactory.shapeExample
+package abstractFactory.shapeExample
 
 interface  Shape {
      fun draw() : String

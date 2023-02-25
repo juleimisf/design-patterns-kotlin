@@ -1,7 +1,7 @@
-package patternAbstractFactory.gameExample
+package abstractFactory.gameExample
 
-import patternAbstractFactory.Cactus
-import patternAbstractFactory.Sand
+import abstractFactory.Cactus
+import abstractFactory.Sand
 
 class DesertFactory : Factory {
     override fun createTerrain() = Sand()

@@ -1,4 +1,4 @@
-package patternAbstractFactory.shapeExample
+package abstractFactory.shapeExample
 
 class ShapeFactory : Factory(){
     override fun getShape() = Circle()

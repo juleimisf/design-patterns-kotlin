@@ -1,4 +1,4 @@
-package patternAbstractFactory
+package abstractFactory
 
 abstract class Terrain{
     abstract fun print() : String

@@ -1,4 +1,4 @@
-package patternAbstractFactory.shapeExample
+package abstractFactory.shapeExample
 
 fun main(args: Array<String>) {
     val color = FactoryProvider().getFactoryColor()

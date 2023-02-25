@@ -1,4 +1,4 @@
-package patternAbstractFactory.shapeExample
+package abstractFactory.shapeExample
 
 class FactoryProvider {
     fun getFactoryColor() : Factory {

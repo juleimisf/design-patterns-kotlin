@@ -1,4 +1,4 @@
-package patternAbstractFactory.shapeExample
+package abstractFactory.shapeExample
 
 class ColorFactory : Factory() {
     override fun getShape() = null
