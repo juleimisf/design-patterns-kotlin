@@ -126,13 +126,39 @@ En conclusion, el patrón Abstract Factory es útil en cualquier situación en l
 El patrón Factory Method se enfoca en crear objetos de una sola familia de productos, mientras que el patrón Abstract Factory se enfoca en crear familias enteras de objetos relacionados.
 
 ## 5. Singleton
-Este es un patron creacional y su función principal es crear una unica instancia de una clase y q ue esta tenga un acceso goblal. Este quizá sea una de los patrones mas faciles de implementar pero hay que tener sumo cuidado de no abusar del mismo. Es ideal que el constructor no sea publico y que el cliente solo tenga acceso a la obtención de la instancia.
+Este es un patrón creacional y su función principal es crear una única instancia de una clase y que esta tenga un acceso global. Este quizá sea una de los patrones más fáciles de implementar, pero hay que tener sumo cuidado de no abusar del mismo. Es ideal que el constructor no sea público y que el cliente solo tenga acceso a la obtención de la instancia.
 
 <img width="814" alt="Screen Shot 2022-12-12 at 23 10 44" src="https://user-images.githubusercontent.com/16981896/207208964-df3a83a7-ea44-4cd6-9f5f-cdcc228fd0ed.png">
 
-- **Singleton Class:** declarra un metodo que se encarga de devolver la misma instancia de su propia clase.
+Definición de cada elemento:
+El patrón Singleton es uno de los patrones de diseño creacionales más comunes en la programación orientada a objetos. Sus principales elementos son los siguientes:
 
-Varias de las ventajas de este patron es que asegura que solo tengamos una única instancia de una clase, ademas de que dicha instancia se podrá acceder de forma global y este singleton solo se crea una única vez.
+Singleton: es la clase que se asegura de que solo haya una instancia de sí misma en todo el sistema. Controla el acceso a esa instancia única mediante un método estático que devuelve la instancia.
+
+Constructor privado: es un constructor que se define como privado para evitar que se cree una instancia de la clase fuera de la propia clase.
+
+Método estático de instancia única (Singleton): es el método que devuelve la única instancia de la clase Singleton. Se suele implementar como un método estático que devuelve la instancia única, creándola si no existe previamente.
+
+Donde puedo usarlo?
+El patrón Singleton se puede utilizar en situaciones donde se necesita garantizar que sólo exista una instancia de una clase en todo el programa, y que esta instancia sea fácilmente accesible desde cualquier parte del mismo. Algunos casos donde se puede utilizar son:
+
+- En aplicaciones de registro: en aplicaciones donde los usuarios necesitan registrarse para utilizar el servicio, se puede usar el patrón Singleton para garantizar que sólo exista una instancia del objeto que maneja el registro y autenticación de los usuarios.
+
+- En aplicaciones de manejo de configuraciones: en aplicaciones donde se necesita tener una única fuente de configuraciones que pueda ser fácilmente accedida y modificada por todas las partes del programa, se puede utilizar el patrón Singleton para garantizar que sólo exista una instancia de la clase que maneja las configuraciones.
+
+- En aplicaciones de acceso a bases de datos: en aplicaciones donde se necesita tener una única conexión a una base de datos que pueda ser fácilmente accedida y utilizada por todas las partes del programa, se puede utilizar el patrón Singleton para garantizar que sólo exista una instancia de la clase que maneja la conexión a la base de datos.
+
+Cómo implementar correctamente el patrón Singleton
+
+Para implementar correctamente el patrón Singleton, es necesario seguir los siguientes pasos:
+
+Crear una clase que contenga la instancia del objeto que queremos que sea único y privado. Este objeto debe ser estático, es decir, pertenecer a la clase y no a una instancia particular de la misma.
+
+Crear un constructor privado para la clase, de manera que la instancia solo pueda ser creada desde la propia clase.
+
+Crear un método público estático que permita acceder a la instancia de la clase. Si la instancia no ha sido creada todavía, este método debe crearla y devolverla. Si ya existe, debe devolver la instancia ya creada.
+
+Asegurarse de que la clase es segura para ser utilizada en un entorno multihilo. Para ello, es necesario utilizar técnicas de sincronización que eviten que varias instancias de la clase sean creadas al mismo tiempo.
 
 ## 5. Command
 Es un patron de comportamiento, nos permite desacoplar las acciones de los objetos, es decir del objeto que solicita realizar una acción del que realizará dicha acción. Convierte las solicitudes o operaciones en objetos.
