@@ -101,14 +101,14 @@ El patrón Factory Method y el patrón Abstract Factory pueden parecer similares
 
 Tabla comparativa entre el patrón de diseño Factory Method y Abstract Factory
 
-|           | Factory Method                        | Abstract Factory                   |
-|-----------|---------------------------------------|------------------------------------|
-| Tipo      | Patrón creacional                     | Patrón creacional                   |
-| Propósito | Crear objetos sin especificar su clase | Crear familias de objetos relacionados|
-| Crea      | Una sola instancia de una clase        | Varias instancias de distintas clases|
-| Subclases | Definen la clase concreta a crear      | Definen las clases concretas a crear|
-| Flexibilidad | Mayor flexibilidad al agregar nuevas subclases | Mayor flexibilidad al agregar nuevas familias de objetos |
-| Composición | Puede requerir de composición con otros patrones como Template Method | Puede requerir de composición con otros patrones como Singleton y Visitor |
+|       **Factoría de Métodos (Factory Method)**       |   **Factoría Abstracta (Abstract Factory)**   |
+| :--------------------------------------------------: | :-------------------------------------------: |
+| Define una interfaz para crear un objeto de forma que las subclases puedan decidir qué clase implementar. | Proporciona una interfaz para crear familias de objetos relacionados o dependientes sin especificar sus clases concretas. |
+| Es utilizado para crear un solo producto. | Es utilizado para crear múltiples productos relacionados. |
+| La subclase determina la clase concreta a instanciar. | La subclase determina la factoría concreta a utilizar. |
+| Es una solución más simple y fácil de entender. | Es una solución más compleja pero más flexible y escalable. |
+| Útil cuando se tiene un conjunto conocido de tipos de objetos que deben ser creados. | Útil cuando se tiene un conjunto de tipos de objetos que deben ser creados y hay una dependencia entre ellos. |
+
 
 
 ## 4. Abstract Factory
