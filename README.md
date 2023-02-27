@@ -198,7 +198,30 @@ Mejorando la escalabilidad del código con el patrón Command:
 - Fácil extensibilidad: El patrón Command facilita la extensión de nuevas funcionalidades en tu código. Al agregar nuevos comandos, puedes proporcionar nuevas funcionalidades a tu aplicación sin tener que cambiar el código existente.
 
 ## 5. Adapter
-Entra dentro d elos patrones estructurales
+El patrón de diseño Adapter se utiliza para adaptar una interfaz existente a otra interfaz requerida por el cliente, permitiendo que objetos con interfaces incompatibles trabajen juntos de manera efectiva.
+
+El adaptador actúa como un puente entre dos interfaces, traduciendo una interfaz en términos que la otra puede entender y utilizar. Este patrón es muy útil cuando se utiliza código heredado o componentes de terceros que no pueden ser modificados para cumplir con los requisitos de la aplicación.
+
+Lo que debes saber sobre el patrón adapter
+
+- Propósito: El patrón Adapter se utiliza para convertir una interfaz incompatible en otra interfaz que el cliente espera. Permite que objetos con interfaces incompatibles puedan trabajar juntos.
+
+- Estructura: El patrón Adapter consiste en tres componentes principales: el Adapter, el Adaptee y el Cliente. El Adaptee es la clase existente que necesitamos adaptar, el Adapter es la clase que adapta la interfaz del Adaptee a la interfaz requerida por el Cliente, y el Cliente es la clase que utiliza el Adapter para interactuar con el Adaptee.
+
+- Tipos: Hay dos tipos de adaptadores, el adaptador de clase y el adaptador de objeto. El adaptador de clase utiliza la herencia para adaptar la interfaz del Adaptee a la interfaz del Cliente, mientras que el adaptador de objeto utiliza la composición para adaptar la interfaz del Adaptee a la interfaz del Cliente. Ambos tipos de adaptadores pueden ser útiles dependiendo del contexto de uso.
+
+El patrón Adapter a menudo se compara con el patrón Bridge debido a que ambos involucran la idea de conectar dos componentes o sistemas diferentes. Sin embargo, mientras que el Adapter se enfoca en hacer que un objeto existente funcione con otro objeto incompatible, el Bridge se enfoca en desacoplar una abstracción de su implementación para que puedan variar de manera independiente.
+
+¡Por supuesto! Aquí te dejo el código para que puedas copiar y pegar en tu archivo .md:
+
+ruby
+Copy code
+|          Patron          |            Adaptador           |           Comando           |
+|:-----------------------:|:------------------------------:|:---------------------------:|
+|          Propósito       |    Adaptar una interfaz existente a otra interfaz requerida |  Encapsular una solicitud como un objeto, permitiendo que los clientes soliciten operaciones específicas. |
+|      Estructura          |     Clase Adaptador, objeto Adaptee, objeto Target   |   Clase Comando, receptor, invocador, cliente   |
+|         Funcionamiento   |   Permite que objetos con interfaces incompatibles trabajen juntos, convirtiendo la interfaz de uno a otra.   |   Divide las solicitudes de los clientes en objetos independientes que contienen toda la información necesaria para su ejecución posterior.   |
+|         Flexibilidad     |   Puede adaptar múltiples interfaces y también se puede utilizar para realizar la conversión de tipos de datos.   |   Permite la extensibilidad al agregar nuevos comandos sin cambiar el código existente.   |
 
 ## 5. Facade
  Imagina que deseas implementar un sistema de seguridad en tu casa que contengas subsistemas como por ejemplo: un sistema de alarma, sistema de sensores, sistema de camara de vigilancia en entre otros. El dueño de la casa necesita de una interfaz simple, comoda y facil de usar  para interactuar con estos subsistema y mantener su hogar seguro, aqui es que aparace el patron Facade, el usuario no tiene la necesidad de  saber todo lo complejo o lo que ocurre en cada subsistema para poder funcionar.
