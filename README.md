@@ -212,16 +212,22 @@ Lo que debes saber sobre el patrón adapter
 
 El patrón Adapter a menudo se compara con el patrón Bridge debido a que ambos involucran la idea de conectar dos componentes o sistemas diferentes. Sin embargo, mientras que el Adapter se enfoca en hacer que un objeto existente funcione con otro objeto incompatible, el Bridge se enfoca en desacoplar una abstracción de su implementación para que puedan variar de manera independiente.
 
-¡Por supuesto! Aquí te dejo el código para que puedas copiar y pegar en tu archivo .md:
+| **Patrón** | **Adapter** | **Bridge** |
+| --- | --- | --- |
+| **Tipo de patrón** | Estructural | Estructural |
+| **Propósito** | Convierte la interfaz de una clase en otra interfaz esperada por el cliente | Separa una abstracción de su implementación, de manera que ambas puedan variar independientemente |
+| **Uso común** | Cuando se desea reutilizar una clase existente que no tiene la interfaz que el cliente requiere | Cuando se desea tener múltiples variantes de la misma abstracción que se pueden modificar y extender de forma independiente |
+| **Componentes** | Adaptador, clase Adaptee, interfaz objetivo y cliente | Abstracción, implementación, clases refinadas y cliente |
 
-ruby
-Copy code
-|          Patron          |            Adaptador           |           Comando           |
-|:-----------------------:|:------------------------------:|:---------------------------:|
-|          Propósito       |    Adaptar una interfaz existente a otra interfaz requerida |  Encapsular una solicitud como un objeto, permitiendo que los clientes soliciten operaciones específicas. |
-|      Estructura          |     Clase Adaptador, objeto Adaptee, objeto Target   |   Clase Comando, receptor, invocador, cliente   |
-|         Funcionamiento   |   Permite que objetos con interfaces incompatibles trabajen juntos, convirtiendo la interfaz de uno a otra.   |   Divide las solicitudes de los clientes en objetos independientes que contienen toda la información necesaria para su ejecución posterior.   |
-|         Flexibilidad     |   Puede adaptar múltiples interfaces y también se puede utilizar para realizar la conversión de tipos de datos.   |   Permite la extensibilidad al agregar nuevos comandos sin cambiar el código existente.   |
+<img width="398" alt="Screen Shot 2023-02-26 at 22 31 43" src="https://user-images.githubusercontent.com/16981896/221451920-663fb194-b098-4e37-bf22-d2e5943bb3d0.png">
+
+Posibles escenarios para usar el patrón Adapter
+- Cuando necesitas usar una clase existente que no es compatible con el resto del código, ya sea porque tiene una interfaz diferente o porque tiene un comportamiento diferente al esperado.
+- Cuando necesitas reutilizar una clase existente en una nueva aplicación que tiene diferentes requisitos de interfaz.
+- Cuando necesitas utilizar varias clases diferentes que tienen interfaces incompatibles en un solo lugar, como en una biblioteca o marco de trabajo.
+- Cuando necesitas controlar o limitar el acceso a una clase existente, por ejemplo, para protegerla de cambios o para restringir su uso en un contexto específico.
+- Cuando necesitas adaptar un servicio web o una API que tiene una interfaz incompatible con tu aplicación.
+
 
 ## 5. Facade
  Imagina que deseas implementar un sistema de seguridad en tu casa que contengas subsistemas como por ejemplo: un sistema de alarma, sistema de sensores, sistema de camara de vigilancia en entre otros. El dueño de la casa necesita de una interfaz simple, comoda y facil de usar  para interactuar con estos subsistema y mantener su hogar seguro, aqui es que aparace el patron Facade, el usuario no tiene la necesidad de  saber todo lo complejo o lo que ocurre en cada subsistema para poder funcionar.
