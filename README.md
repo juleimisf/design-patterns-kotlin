@@ -210,6 +210,8 @@ Lo que debes saber sobre el patrón adapter
 
 - Tipos: Hay dos tipos de adaptadores, el adaptador de clase y el adaptador de objeto. El adaptador de clase utiliza la herencia para adaptar la interfaz del Adaptee a la interfaz del Cliente, mientras que el adaptador de objeto utiliza la composición para adaptar la interfaz del Adaptee a la interfaz del Cliente. Ambos tipos de adaptadores pueden ser útiles dependiendo del contexto de uso.
 
+Cuándo utilizar Adapter y Bridge en el diseño de software
+
 El patrón Adapter a menudo se compara con el patrón Bridge debido a que ambos involucran la idea de conectar dos componentes o sistemas diferentes. Sin embargo, mientras que el Adapter se enfoca en hacer que un objeto existente funcione con otro objeto incompatible, el Bridge se enfoca en desacoplar una abstracción de su implementación para que puedan variar de manera independiente.
 
 | **Patrón** | **Adapter** | **Bridge** |
