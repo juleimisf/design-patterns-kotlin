@@ -89,6 +89,28 @@ Cuando puedo usar este patron?
 
 - **Concrete Factory:** se encarga de devolver nuevos objetos diferentes, anulando el metedoto base del **factory**
 
+El patrón Factory Method y el patrón Abstract Factory pueden parecer similares en algunos aspectos, lo que puede llevar a cierta confusión. Aquí hay algunas razones por las que se pueden confundir:
+
+- Ambos patrones son creacionales y se utilizan para crear objetos. El patrón Factory Method crea objetos a través de una interfaz común, mientras que el patrón Abstract Factory crea objetos relacionados por familias.
+
+- En ambos patrones, el cliente no sabe qué clase concreta está instanciando. En el patrón Factory Method, la creación de objetos se delega a las subclases, y en el patrón Abstract Factory, la creación de objetos se delega a una fábrica abstracta.
+
+- Ambos patrones son útiles para crear objetos que sean compatibles entre sí. El patrón Factory Method garantiza que todos los objetos creados sean del mismo tipo, mientras que el patrón Abstract Factory garantiza que los objetos creados sean compatibles entre sí.
+
+- A pesar de estas similitudes, es importante tener en cuenta que estos patrones son diferentes y se utilizan para diferentes propósitos. Es importante comprender las diferencias para poder elegir el patrón adecuado según las necesidades del proyecto.
+
+Tabla comparativa entre el patrón de diseño Factory Method y Abstract Factory
+
+|           | Factory Method                        | Abstract Factory                   |
+|-----------|---------------------------------------|------------------------------------|
+| Tipo      | Patrón creacional                     | Patrón creacional                   |
+| Propósito | Crear objetos sin especificar su clase | Crear familias de objetos relacionados|
+| Crea      | Una sola instancia de una clase        | Varias instancias de distintas clases|
+| Subclases | Definen la clase concreta a crear      | Definen las clases concretas a crear|
+| Flexibilidad | Mayor flexibilidad al agregar nuevas subclases | Mayor flexibilidad al agregar nuevas familias de objetos |
+| Composición | Puede requerir de composición con otros patrones como Template Method | Puede requerir de composición con otros patrones como Singleton y Visitor |
+
+
 ## 4. Abstract Factory
 
 1. Definicion: El patrón de diseño Abstract Factory es un patrón creacional que proporciona una interfaz para crear familias de objetos relacionados sin especificar su clase concreta. Es decir, permite crear objetos de diferentes tipos relacionados entre sí, sin conocer la implementación específica de cada uno. Esto permite que la aplicación sea más flexible y escalable, ya que los objetos pueden ser intercambiados sin afectar al resto del sistema.
