@@ -11,16 +11,42 @@ Los patrones de diseño son soluciones estandarizadas a problemas que surgen en 
 - **Estructurales:** son aquellos que se enfocan en como conectar y organizar objetos para lograr una funcionalidad en particular.
 - **De comportamiento:** se enfoca en como los objetos de comunican e interactuan entre si.
 
-## Strategy  
-El patrón Strategy se puede entender como tener diferentes herramientas en un kit de herramientas. Cada herramienta tiene una función específica, pero todas se pueden utilizar para realizar una tarea similar, como arreglar una bicicleta. Dependiendo de la tarea que necesites realizar en la bicicleta, puedes elegir la herramienta adecuada para el trabajo.
 
-De manera similar, el patrón Strategy se utiliza para proporcionar diferentes algoritmos o estrategias para realizar una tarea particular. Cada estrategia es una clase que implementa una interfaz común, lo que permite que las estrategias sean intercambiables. El contexto utiliza una de las estrategias para realizar la tarea según sea necesario.
+## Strategy
 
-<img width="694" alt="Screen Shot 2022-11-24 at 23 16 38" src="https://user-images.githubusercontent.com/16981896/203886974-3f4e40cc-74d9-432f-8f65-5f4d77d8daaf.png">
+El patrón **Strategy** se puede entender como tener diferentes herramientas en un kit de herramientas. Cada herramienta tiene una función específica, pero todas se pueden utilizar para realizar una tarea similar, como arreglar una bicicleta. Dependiendo de la tarea que necesites realizar en la bicicleta, puedes elegir la herramienta adecuada para el trabajo.
+
+De manera similar, el patrón **Strategy** se utiliza para proporcionar diferentes algoritmos o estrategias para realizar una tarea particular. Cada estrategia es una clase que implementa una interfaz común, lo que permite que las estrategias sean intercambiables. El contexto utiliza una de las estrategias para realizar la tarea según sea necesario.
+
+![Diagrama de clase del patrón Strategy](https://user-images.githubusercontent.com/16981896/203886974-3f4e40cc-74d9-432f-8f65-5f4d77d8daaf.png)
 
 - **Strategy:** es una interfaz que es extendida por los diferentes algoritmos. Donde el **Contexto** puede llamarla por medio de un **ConcreteStrategy** dentro de ella se define uno o varios métodos que serán utilizados por los algoritmos dentro de los **ConcreteStrategy**.
 - **Context:** mantiene una referencia de Strategy y selecciona que tipo ConcreteStrategy utilizar.
 - **ConcreteStrategy:** implemente la interfaz Strategy y desarrolla el algoritmo.
+
+### Casos de uso comunes del patrón Strategy
+
+- Clasificación: En una aplicación de clasificación, se pueden tener diferentes estrategias para ordenar los datos, como ordenarlos alfabéticamente, por fecha, por tamaño, etc.
+- Autenticación: Un sistema de autenticación puede tener diferentes estrategias para validar la identidad del usuario, como autenticación basada en contraseñas, autenticación basada en tokens, autenticación biométrica, etc.
+- Compresión de datos: En una aplicación de compresión de datos, se pueden tener diferentes estrategias para comprimir los datos, como la compresión sin pérdida, la compresión con pérdida, etc.
+- Algoritmos de búsqueda: Un algoritmo de búsqueda puede tener diferentes estrategias para buscar los datos, como búsqueda en profundidad, búsqueda en amplitud, búsqueda en línea recta, etc.
+
+### Ventajas
+- Flexibilidad: El patrón Strategy permite cambiar el comportamiento de un objeto en tiempo de ejecución. Esto significa que puedes cambiar la estrategia utilizada por un objeto en cualquier momento sin tener que modificar el objeto en sí.
+
+- Reutilización de código: Cada estrategia puede ser reutilizada en diferentes contextos, lo que significa que puedes aprovechar el mismo código en diferentes partes de una aplicación.
+
+- Fácil mantenimiento: Como cada estrategia está encapsulada en su propia clase, el patrón Strategy hace que el mantenimiento del código sea mucho más fácil y claro.
+
+- Desacoplamiento: El patrón Strategy separa la lógica de negocio del código que la utiliza, lo que permite una mayor flexibilidad en el diseño y evita un acoplamiento innecesario entre objetos.
+
+### Desventajas
+- Aumento de complejidad: A medida que se agregan más estrategias, la complejidad del código aumenta, lo que puede dificultar la comprensión y el mantenimiento.
+
+- Aumento de la cantidad de clases: Cada estrategia se define en su propia clase, lo que puede resultar en una mayor cantidad de clases y archivos en el proyecto.
+
+- Dificultad para elegir la estrategia correcta: Con múltiples estrategias disponibles, puede resultar difícil seleccionar la estrategia correcta para una tarea específica. Esto puede requerir un análisis adicional y puede llevar a una mayor complejidad en el diseño del programa.
+
 
 ## Observer 
 
