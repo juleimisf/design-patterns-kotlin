@@ -161,14 +161,41 @@ Crear un método público estático que permita acceder a la instancia de la cla
 Asegurarse de que la clase es segura para ser utilizada en un entorno multihilo. Para ello, es necesario utilizar técnicas de sincronización que eviten que varias instancias de la clase sean creadas al mismo tiempo.
 
 ## 5. Command
+Para entender el patrón Command es pensar en un control remoto de televisión. El control remoto es un objeto que te permite enviar comandos a la televisión sin saber cómo funciona exactamente. Solo necesitas presionar el botón "encender" y la televisión se encenderá, sin importar cómo se implemente esa funcionalidad en la televisión.
+
+De la misma manera, el patrón Command te permite encapsular un comando como un objeto independiente de su implementación, de manera que puedas invocar el comando sin necesidad de conocer los detalles de cómo se implementa. En lugar de tener que conocer el funcionamiento interno de una función o método, puedes simplemente llamar al objeto de comando correspondiente y este se encargará de ejecutar el comando adecuado.
+
 Es un patron de comportamiento, nos permite desacoplar las acciones de los objetos, es decir del objeto que solicita realizar una acción del que realizará dicha acción. Convierte las solicitudes o operaciones en objetos.
 
-- **Client:** crear los comandos concretos es decir los *Concrere Commands* que implementan la interfaz *Command*, ademas de esto tambien crea el *Receiver*
-- **Commmand:** es una interfaz que declara el meedo *execute()* encargado de ejecutar el comando.
-- **Invoker:** es el encargado de almacenar una lista de comandos listos para ejecutarse. Importante mencionar que el *Invoker* desconoce la forma de implementación de la solicitud.
-- **Receiver:** es quien conoce la forma de implementar la solicitud, lo hace a traves del comando concreto que hace uso de la interfaz Command.
-- **Concrete Commands:** es el que implementa la solicitud en si.
+Aspectos claves del patrón Command
+
+- El patrón Command se enfoca en encapsular una petición o acción en un objeto independiente de la petición misma, permitiendo su ejecución en distintos momentos. Es decir, separa la petición de quién la ejecuta y cómo se ejecuta.
+
+- El patrón Command se compone de cuatro elementos: el receptor, el comando, el invocador y el cliente. El receptor es el objeto que recibe la petición, el comando es el objeto que encapsula la petición, el invocador es el objeto que ejecuta la petición, y el cliente es el objeto que crea y configura los objetos Command para ejecutar las distintas acciones.
+
+- El patrón Command es especialmente útil en situaciones donde se requiere la capacidad de deshacer acciones o la implementación de historiales de acciones. Al encapsular cada acción en un objeto, es posible deshacer o rehacer cualquier acción ejecutada en el pasado, o incluso mantener un historial de las acciones realizadas para su posterior análisis.
+
 <img width="762" alt="Screen Shot 2022-12-29 at 00 32 57" src="https://user-images.githubusercontent.com/16981896/209899863-65076852-3b57-4451-bb62-edae0e635d5f.png">
+
+El patrón de diseño Command se puede implementar siguiendo los siguientes pasos:
+
+- Define la interfaz de comando: Define una interfaz común para todos los comandos, que debería tener un método ejecutar().
+
+- Crea clases concretas de comando: Crea clases que implementen la interfaz de comando para cada tipo de comando que necesites en tu aplicación.
+
+- Define la clase invocadora: Define una clase invocadora que tenga una referencia a la interfaz de comando y un método para establecer el comando actual.
+
+- Crea objetos de comando: Crea objetos de comando concretos y configúralos con la clase invocadora.
+
+- Ejecuta los comandos: Llama al método ejecutar() en el objeto de comando para ejecutar la operación asociada al comando.
+
+Mejorando la escalabilidad del código con el patrón Command:
+
+- Desacoplamiento: Al utilizar el patrón Command, puedes desacoplar los objetos que envían comandos de los objetos que los ejecutan, lo que significa que puedes agregar nuevos comandos sin tener que cambiar el código que los envía.
+
+- Flexibilidad: Con el patrón Command, puedes crear comandos genéricos que puedan ser reutilizados en diferentes partes de tu código. Esto significa que puedes crear una amplia gama de comandos para diferentes propósitos y reutilizarlos en diferentes partes de tu código.
+
+- Fácil extensibilidad: El patrón Command facilita la extensión de nuevas funcionalidades en tu código. Al agregar nuevos comandos, puedes proporcionar nuevas funcionalidades a tu aplicación sin tener que cambiar el código existente.
 
 ## 5. Adapter
 Entra dentro d elos patrones estructurales
