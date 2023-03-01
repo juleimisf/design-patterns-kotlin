@@ -18,13 +18,13 @@ Este repositorio es el lugar perfecto para aprender sobre los patrones de diseñ
   - [3.2 Patrón de diseño Decorator](#decorator)
   - [3.3 Patrón de diseño Facade](#facade)
   - [3.4 Patrón de diseño Composite](#composite)
-- [Patrones de comportamiento](#comportamiento)
-  - [Patrón de diseño Command](#command)
-  - [Patrón de diseño Iterator](#iterator)
-  - [Patrón de diseño Observer](#observer)
-  - [Patrón de diseño State](#state)
-  - [Patrón de diseño Strategy](#strategy)
-  - [Patrón de diseño Template Method](#template)
+- [4. Patrones de comportamiento](#comportamiento)
+  - [4.1 Patrón de diseño Command](#command)
+  - [4.2 Patrón de diseño Iterator](#iterator)
+  - [4.3 Patrón de diseño Observer](#observer)
+  - [4.4 Patrón de diseño State](#state)
+  - [4.5 Patrón de diseño Strategy](#strategy)
+  - [4.6 Patrón de diseño Template Method](#template)
 
 
 # Introducción <a name="introducción"></a>
