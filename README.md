@@ -46,6 +46,8 @@ El patrón Singleton es uno de los patrones de diseño creacionales más comunes
 - Constructor privado: es un constructor que se define como privado para evitar que se cree una instancia de la clase fuera de la propia clase.
 - Método estático de instancia única (Singleton): es el método que devuelve la única instancia de la clase Singleton. Se suele implementar como un método estático que devuelve la instancia única, creándola si no existe previamente.
 
+<img width="814" alt="Screen Shot 2022-12-12 at 23 10 44" src="https://user-images.githubusercontent.com/16981896/207208964-df3a83a7-ea44-4cd6-9f5f-cdcc228fd0ed.png">
+
 ## Uso
 
 El patrón Singleton se puede utilizar en situaciones donde se necesita garantizar que sólo exista una instancia de una clase en todo el programa, y que esta instancia sea fácilmente accesible desde cualquier parte del mismo. Algunos casos donde se puede utilizar son:
@@ -62,8 +64,6 @@ Para implementar correctamente el patrón Singleton, es necesario seguir los sig
 2. Crear un constructor privado para la clase, de manera que la instancia solo pueda ser creada desde la propia clase.
 3. Crear un método público estático que permita acceder a la instancia de la clase. Si la instancia no ha sido creada todavía, este método debe crearla y devolverla. Si ya existe, debe devolver la instancia ya creada.
 4. Asegurarse de que la clase es segura para ser utilizada en un entorno multihilo. Para ello, es necesario utilizar técnicas de sincronización que eviten que varias instancias de la clase sean creadas al mismo tiempo.
-
-<img width="814" alt="Screen Shot 2022-12-12 at 23 10 44" src="https://user-images.githubusercontent.com/16981896/207208964-df3a83a7-ea44-4cd6-9f5f-cdcc228fd0ed.png">
 
 # Factory Method <a name="factory-method"></a>
 
