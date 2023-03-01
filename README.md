@@ -25,6 +25,7 @@ Este repositorio es el lugar perfecto para aprender sobre los patrones de diseñ
   - [4.4 Patrón de diseño State](#state)
   - [4.5 Patrón de diseño Strategy](#strategy)
   - [4.6 Patrón de diseño Template Method](#template)
+- [5. Referencias](#referencia)
 
 
 # Introducción <a name="introducción"></a>
@@ -344,6 +345,13 @@ En general, el patrón Observer es útil en cualquier situación en la que se ne
 - **ConcreteSubject:** registra a todos los observadores, y envia las notificaciones correspondientes a los subcriptores.
 - **ConcreteObserver:** mantiene una relación con el Observer para mostrar dichos cambios emitido por el Concrete Subject.
 
+| Elemento | Descripción |
+| --- | --- |
+| Subject| Interfaz que define las operaciones para agregar y quitar observadores, así como para notificarlos de los cambios en el estado del objeto. |
+| ConcreteSubject | Clase concreta que implementa la interfaz de Sujeto/Observable y que mantiene un registro de sus observadores. Notifica a los observadores cuando su estado cambia. |
+| Observer | Interfaz que define la operación de actualización que es llamada por el sujeto cuando hay un cambio de estado. |
+| ConcreteObserver | Clase concreta que implementa la interfaz de Observador y que almacena una referencia al sujeto. |
+
 **Ventajas de su uso**
 
 - Desacoplamiento: El patrón Observer se utiliza para desacoplar el sujeto (objeto que notifica) y los observadores (objetos que reciben la notificación). Esto significa que el sujeto y los observadores no tienen que conocer la existencia del otro. El sujeto simplemente notifica a los observadores interesados sin preocuparse por cómo se manejan las notificaciones en cada observador.
@@ -362,13 +370,12 @@ Este patron es util para manejar comportamiento diferentes de un objeto en funci
 
 Para entender un poco mas este patron imagina que estas usando un maquina expendedora de bebidas, esta maquina puede estar en un estado determinado en un momento determinado, estos estados podrian ser por ejemplo: "esperando ingreso de efectivo", "expediendo bebida", "mostrar un mensaje de error". Con esto, podemos entender que los objetos de un programa pueden tener varios estados y comportamientas asociados a esos estados. Si cambia de un estado a otro el comportamiento tambien cambia.
 
-#### Aplicaciones
+**Uso**
 - Sistemas de pagos : por ejemplo un sistema de pagos puede manejar estado de "procesando", "exitoso" "rechazado", "error", "pendiente", entre otros, con el uso del patron State podmeos definir y modelar el compartamiento de cada uno de ellos, ya que son bastante flexibles podemos agrgar tanto nuevos estados como comportamiento sin afectar el sistema completo.
 - Maquina expendedora.
 - Juegos.
 
-#### Commo comenzar a aplicar el patron State?
-
+**¿Cómmo comenzar a aplicar el patron State?
 1. Lo primero que debemos hacer es identificar los diferentes estados que puede tener el objeto, se debe definir una clase para cada uno de ellos. Importante definir una clase comun para cada una de las clases para garantizar que cada uno de ellas implemente los metodos.
 2. Se debe difinir una clase Context que representa el objeto al que se le van a cambiar los estados, que debe mantener una referencia a una clase de estado inicial.
 3. La clase Context debe implementar los metodos que le permitiran cambiar de estado.
@@ -376,13 +383,15 @@ Para entender un poco mas este patron imagina que estas usando un maquina expend
 
 <img width="503" alt="Screen Shot 2023-02-12 at 20 10 12" src="https://user-images.githubusercontent.com/16981896/218342930-6b872d53-3d78-4155-b0b8-cf946ab8fd83.png">
 
-#### Definición de cada elemento
+**Definición de cada elemento**
+| Elemento | Descripción |
+| --- | --- |
+| State | Define una interfaz para los estados que serán implementados por las clases concretas del estado. |
+| Concrete State | Implementa la interfaz del estado y proporciona la implementación para cada uno de los comportamientos del contexto. |
+| Context | Mantiene una referencia al objeto del estado actual y delega cualquier trabajo al objeto del estado actual. |
 
-- Context: posee un estado y se comportande de acuerdo a ese estado.
-- State: es la interfaz que posee los metodos donde cada clase de estado debe implementar y asi definir el comportamiendo requerido.
-- Concrete State: son las clases que representan los diferentes estados y deben implemnetar la interfaz State.
 
-#### Beneficios de usar este patron
+**Beneficios de usar este patron**
 - Simplicidad: permite tener una logica bastante separada para cada estado lo que hace que sea mucho mas facil de entender y mantener.
 - Flixibilidad: al tener la logica separada para cada estado, podemos de forma rapida y sencilla agragr nuevos estado sy comportamientos sin tener que cambiar la logica del objeto orincipal.
 - Organizacion: al mantener las clases separadas de cada estado, esto permite tener un codigo mas organizado y facil de entenderlo que haces mas simple su mantenimiento y depuración.
@@ -395,18 +404,21 @@ De manera similar, el patrón **Strategy** se utiliza para proporcionar diferent
 
 ![Diagrama de clase del patrón Strategy](https://user-images.githubusercontent.com/16981896/203886974-3f4e40cc-74d9-432f-8f65-5f4d77d8daaf.png)
 
-- **Strategy:** es una interfaz que es extendida por los diferentes algoritmos. Donde el **Contexto** puede llamarla por medio de un **ConcreteStrategy** dentro de ella se define uno o varios métodos que serán utilizados por los algoritmos dentro de los **ConcreteStrategy**.
-- **Context:** mantiene una referencia de Strategy y selecciona que tipo ConcreteStrategy utilizar.
-- **ConcreteStrategy:** implemente la interfaz Strategy y desarrolla el algoritmo.
+**Definición de cada elemento**
 
-### Casos de uso comunes del patrón Strategy
+| Elemento | Descripción |
+| --- | --- |
+| Context | Objeto que delega la ejecución de un algoritmo a una clase Strategy. |
+| Strategy | Interfaz o clase abstracta que define el comportamiento de un algoritmo. |
+| ConcreteStrategy | Implementaciones concretas de la interfaz o clase abstracta Strategy. |
 
+**Uso**
 - Clasificación: En una aplicación de clasificación, se pueden tener diferentes estrategias para ordenar los datos, como ordenarlos alfabéticamente, por fecha, por tamaño, etc.
 - Autenticación: Un sistema de autenticación puede tener diferentes estrategias para validar la identidad del usuario, como autenticación basada en contraseñas, autenticación basada en tokens, autenticación biométrica, etc.
 - Compresión de datos: En una aplicación de compresión de datos, se pueden tener diferentes estrategias para comprimir los datos, como la compresión sin pérdida, la compresión con pérdida, etc.
 - Algoritmos de búsqueda: Un algoritmo de búsqueda puede tener diferentes estrategias para buscar los datos, como búsqueda en profundidad, búsqueda en amplitud, búsqueda en línea recta, etc.
 
-### Ventajas
+**Ventajas**
 - Flexibilidad: El patrón Strategy permite cambiar el comportamiento de un objeto en tiempo de ejecución. Esto significa que puedes cambiar la estrategia utilizada por un objeto en cualquier momento sin tener que modificar el objeto en sí.
 
 - Reutilización de código: Cada estrategia puede ser reutilizada en diferentes contextos, lo que significa que puedes aprovechar el mismo código en diferentes partes de una aplicación.
@@ -422,24 +434,30 @@ De manera similar, el patrón **Strategy** se utiliza para proporcionar diferent
 
 - Dificultad para elegir la estrategia correcta: Con múltiples estrategias disponibles, puede resultar difícil seleccionar la estrategia correcta para una tarea específica. Esto puede requerir un análisis adicional y puede llevar a una mayor complejidad en el diseño del programa.
 
-
 # Template Method <a name="template"></a>
 
-Suponga que es su primer dia en una pizzeria, sus compañeros cada dia crean diferentes tipos de pizzas Margarita, vegetariana, Peperoni, etc, donde cada una de ellos siguen el mismo proceso general que es mezclar los ingredientes para la masa, amasar, colococarlos los topping y hornear sin embargo cada tipo de pizza varian un poco en sus ingredientes o tiempo de cocción, el patron template es similar proporciona una estructura para un proceso o algoritmo pero permite que detalles especifcos sean implementados por las subclases.
+Suponga que es su primer día en una pizzería, sus compañeros cada día crean diferentes tipos de pizzas Margarita, Vegetariana, Pepperoni, etc., donde cada una de ellos siguen el mismo proceso general que es mezclar los ingredientes para la masa, amasar, colocar los toppings y hornear sin embargo cada tipo de pizza varían un poco en sus ingredientes o tiempo de cocción, el patrón template es similar proporciona una estructura para un proceso o algoritmo, pero permite que detalles específicos sean implementados por las subclases.
 
-### Ventajas
-- **Abtracción:** gracias a este patrón podemos abstraer la logica de un algoritmo de sus implementación especifica.
-- **Modificable:** permite hacer cambios sobre un algoritmo en especifico sin tener que cambiar el código existente.
-- **Adaptable:** haciendo uso de este patrón podemos crear jerarquias de clases que se adapten a diferentes escenarios sin la necesidad de escribir código adicional. 
+**Definición**
+
+Template Method es un patrón de diseño de software que se utiliza para definir un esqueleto de un algoritmo en una clase base y permitir que las subclases proporcionen la implementación específica de ciertas partes del algoritmo sin cambiar su estructura general. El patrón Template Method promueve la reutilización de código, ya que se evita la duplicación de código común en las subclases y se mejora la mantenibilidad del código al permitir cambios en el algoritmo sin afectar a las subclases.
+
+**Ventajas**
+- Abtracción: gracias a este patrón podemos abstraer la logica de un algoritmo de sus implementación especifica.
+- Modificable: permite hacer cambios sobre un algoritmo en especifico sin tener que cambiar el código existente.
+- Adaptable: haciendo uso de este patrón podemos crear jerarquias de clases que se adapten a diferentes escenarios sin la necesidad de escribir código adicional. 
 
 <img width="702" alt="Screen Shot 2023-01-27 at 20 24 03" src="https://user-images.githubusercontent.com/16981896/215224371-b0c34171-8b25-4ac3-8520-72977e074c8a.png">
 
+| Elemento | Descripción |
+| --- | --- |
+| Abstract Class | Define el esqueleto del algoritmo en un método template, dejando algunos pasos a ser definidos por las subclases. |
+| Concrete Class | Implementa los pasos específicos que se dejaron en blanco en la clase abstracta. |
+| Template Method | Define el esqueleto de un algoritmo en un método, definiendo los pasos generales y dejando algunos pasos específicos a las subclases. |
 
-## GUIA
-![guia_uml](https://user-images.githubusercontent.com/16981896/204416505-99a97310-5096-4677-8fe5-cfeb7815d002.png)
+# Referencias <a name="referencias"></a>
 
-
-referencias:
-- https://en.proft.me/2016/09/20/factory-design-pattern-java-and-python/
-
+- Head First Design Patterns" de Eric Freeman, Elisabeth Freeman, Bert Bates, and Kathy Sierra.
+- Patterns of Enterprise Application Architecture" de Martin Fowler.
+- https://refactoring.guru/design-patterns
 
