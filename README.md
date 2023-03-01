@@ -13,10 +13,10 @@ Este repositorio es el lugar perfecto para aprender sobre los patrones de diseñ
   - [2.1 Patrón de diseño Singleton](#singleton)
   - [2.2 Patrón de diseño Factory Method](#factory-method)
   - [2.3 Patrón de diseño Abstract Factory](#abstract-factory)
-- [Patrones de estructurales](#introducción)
-  - [Patrón de diseño Adapter](#introducción)
-  - [Patrón de diseño Decorator](#introducción)
-  - [Patrón de diseño Facade](#introducción)
+- [3. Patrones estructurales](#patrones-estructurales)
+  - [3.1 Patrón de diseño Adapter](#adapter)
+  - [3.2 Patrón de diseño Decorator](#decorator)
+  - [3.3 Patrón de diseño Facade](#facade)
 - [Patrones de comportamiento](#introducción)
   - [Patrón de diseño Command](#introducción)
   - [Patrón de diseño Iterator](#introducción)
@@ -135,6 +135,87 @@ Este patron se puede pensar como una fábrica de coches, donde hay varias fábri
 
 En conclusion, el patrón Abstract Factory es útil en cualquier situación en la que se necesite crear familias de objetos relacionados entre sí y se quiera ocultar la complejidad de su creación y relación al cliente.
 
+# Patrones estructurales <a name="patrones-estructurales"></a>
+Son aquellos patrones que se enfocan en la composición de clases y objetos para formar estructuras más complejas. Se utilizan para crear relaciones entre clases y objetos de forma que puedan trabajar juntos de manera eficiente.
+
+# Adapter <a name="adapter"></a>
+El patrón de diseño Adapter se utiliza para adaptar una interfaz existente a otra interfaz requerida por el cliente, permitiendo que objetos con interfaces incompatibles trabajen juntos de manera efectiva.
+
+El adaptador actúa como un puente entre dos interfaces, traduciendo una interfaz en términos que la otra puede entender y utilizar. Este patrón es muy útil cuando se utiliza código heredado o componentes de terceros que no pueden ser modificados para cumplir con los requisitos de la aplicación.
+
+Lo que debes saber sobre el patrón adapter
+
+- Propósito: El patrón Adapter se utiliza para convertir una interfaz incompatible en otra interfaz que el cliente espera. Permite que objetos con interfaces incompatibles puedan trabajar juntos.
+
+- Estructura: El patrón Adapter consiste en tres componentes principales: el Adapter, el Adaptee y el Cliente. El Adaptee es la clase existente que necesitamos adaptar, el Adapter es la clase que adapta la interfaz del Adaptee a la interfaz requerida por el Cliente, y el Cliente es la clase que utiliza el Adapter para interactuar con el Adaptee.
+
+- Tipos: Hay dos tipos de adaptadores, el adaptador de clase y el adaptador de objeto. El adaptador de clase utiliza la herencia para adaptar la interfaz del Adaptee a la interfaz del Cliente, mientras que el adaptador de objeto utiliza la composición para adaptar la interfaz del Adaptee a la interfaz del Cliente. Ambos tipos de adaptadores pueden ser útiles dependiendo del contexto de uso.
+
+Cuándo utilizar Adapter y Bridge en el diseño de software
+
+El patrón Adapter a menudo se compara con el patrón Bridge debido a que ambos involucran la idea de conectar dos componentes o sistemas diferentes. Sin embargo, mientras que el Adapter se enfoca en hacer que un objeto existente funcione con otro objeto incompatible, el Bridge se enfoca en desacoplar una abstracción de su implementación para que puedan variar de manera independiente.
+
+| **Patrón** | **Adapter** | **Bridge** |
+| --- | --- | --- |
+| **Tipo de patrón** | Estructural | Estructural |
+| **Propósito** | Convierte la interfaz de una clase en otra interfaz esperada por el cliente | Separa una abstracción de su implementación, de manera que ambas puedan variar independientemente |
+| **Uso común** | Cuando se desea reutilizar una clase existente que no tiene la interfaz que el cliente requiere | Cuando se desea tener múltiples variantes de la misma abstracción que se pueden modificar y extender de forma independiente |
+| **Componentes** | Adaptador, clase Adaptee, interfaz objetivo y cliente | Abstracción, implementación, clases refinadas y cliente |
+
+<img width="398" alt="Screen Shot 2023-02-26 at 22 31 43" src="https://user-images.githubusercontent.com/16981896/221451920-663fb194-b098-4e37-bf22-d2e5943bb3d0.png">
+
+Posibles escenarios para usar el patrón Adapter
+- Cuando necesitas usar una clase existente que no es compatible con el resto del código, ya sea porque tiene una interfaz diferente o porque tiene un comportamiento diferente al esperado.
+- Cuando necesitas reutilizar una clase existente en una nueva aplicación que tiene diferentes requisitos de interfaz.
+- Cuando necesitas utilizar varias clases diferentes que tienen interfaces incompatibles en un solo lugar, como en una biblioteca o marco de trabajo.
+- Cuando necesitas controlar o limitar el acceso a una clase existente, por ejemplo, para protegerla de cambios o para restringir su uso en un contexto específico.
+- Cuando necesitas adaptar un servicio web o una API que tiene una interfaz incompatible con tu aplicación.
+
+# Decorator <a name="decorator"></a>
+
+También llamado _wrapper pattern_ es un patrón de diseño estructural altamente conocido. Este patrón nos permite extender comportamientos de forma dinámica, es decir permite agregar nuevos comportamientos y funcionalidades a objetos sin que estos alteren su estructura original.
+
+**1. ¿Por qué usarlo?**
+- Si buscar aplicar el principio abierto-cerrado este patrón es una buena opción, ya que promueve la extensión sobre la modificación.
+- Si busca aplicar el principio de responsabilidad única el patrón _decotator_ es una excelente opción, pues, este principio indica que una clase debería realizar una única cosa y es lo que hace este patrón, los decoradores son colocados en clases separadas y que esta envuelva a la clase original.
+
+<img width="926" alt="Screen Shot 2022-11-28 at 22 19 59" src="https://user-images.githubusercontent.com/16981896/204414934-9a5f3dfd-c735-4e69-b3bc-7e2fc64e2a56.png">
+
+**2. Definición de cada elemento**
+
+- **Component:** acá se describen los comportamientos de los componentes y es lo que permite que tanto el objeto como los objetos envueltos se consideren del mismo tipo.
+- **Concrete component:** implementa la interfaz del componente.
+- **Decorator:** es una clase abstracta que también implementa la interfaz del componente y también posee una instancia de esta interfaz.
+- **Concrete decorator:** es una subclase de la clase abstracta Decorator donde se establecen los comportamientos para los objetos proporcionados.
+
+**3. Ejemplo de uso**
+El patrón Decorator se puede utilizar en muchas situaciones, como en la creación de interfaces gráficas de usuario, donde se pueden agregar funcionalidades adicionales a los componentes existentes, como etiquetas, botones y cuadros de texto. También se puede utilizar en la creación de filtros de imágenes, donde se pueden agregar efectos adicionales a las imágenes base.
+
+# Facade <a name="facade"></a>
+ Imagina que deseas implementar un sistema de seguridad en tu casa que contengas subsistemas como por ejemplo: un sistema de alarma, sistema de sensores, sistema de camara de vigilancia en entre otros. El dueño de la casa necesita de una interfaz simple, comoda y facil de usar  para interactuar con estos subsistema y mantener su hogar seguro, aqui es que aparace el patron Facade, el usuario no tiene la necesidad de  saber todo lo complejo o lo que ocurre en cada subsistema para poder funcionar.
+
+### Definición
+ Definido como una patron de diseño estructural permite ocultar la complejidad de un subsistema esto por medio de una interfaz bastate simple. Esto nos ayuda a poder interactura con el sistema de forma más sencilla sin tener que procuparnos de lo que sucede por detras.
+
+ ### ¿Qué puedo hacer con Facade?
+  1. **Ocultar la complejidad:** podemos ocultar lo complejo de un sistema por medio una una interdaz facil de usar. 
+  2. **Interfaz Única:** Proporcionando dicha interfaz unica que nos permite que sea facil de interacturar con el sistema complejo.
+  3. **Reutilizar:** permite la reutilización de los componentes dentro del mismo sistema.
+  4. **Seguridad:** ya que se ocultan los detalles técnicos o internos de un sistema y solo se hace uso de la interfaz que proporciona asegura que solo se limite la interaccion a travez de esta interfaz.
+  5. **Bajo acoplamiento:** con este patrón se evita que las clases **Client** esta acopladas las clases del subsistema de forma directa esto permite actualizarlas, modificarlas y hasta cambiarlas y no afectara el comportamiento del Client.
+
+<img width="640" alt="Screen Shot 2023-01-26 at 21 23 28" src="https://user-images.githubusercontent.com/16981896/214979850-7e7f305d-6ce1-4659-847b-eb985894e971.png">
+
+### Deninición de cada elemento
+- **Client:** hace uso de la interfaz para interactuar con el subsistema.
+- **Facade:** interfaz simplificada para interactuar con el subsistema complejo. 
+- **SubSystem:** son los componentes del subsistema
+
+
+
+
+
+
 
 ## Strategy
 
@@ -202,26 +283,6 @@ En general, el patrón Observer es útil en cualquier situación en la que se ne
 
 El patrón Observer es muy útil en el desarrollo de aplicaciones móviles en Kotlin, ya que permite una comunicación en tiempo real entre los distintos componentes de la aplicación, como ViewModel y Vista, por ejemplo. La implementación del patrón Observer en Kotlin es sencilla y flexible, lo que lo hace una excelente opción para aplicaciones móviles.
 
-## Decorator
-
-También llamado _wrapper pattern_ es un patrón de diseño estructural altamente conocido. Este patrón nos permite extender comportamientos de forma dinámica, es decir permite agregar nuevos comportamientos y funcionalidades a objetos sin que estos alteren su estructura original.
-
-**1. ¿Por qué usarlo?**
-- Si buscar aplicar el principio abierto-cerrado este patrón es una buena opción, ya que promueve la extensión sobre la modificación.
-- Si busca aplicar el principio de responsabilidad única el patrón _decotator_ es una excelente opción, pues, este principio indica que una clase debería realizar una única cosa y es lo que hace este patrón, los decoradores son colocados en clases separadas y que esta envuelva a la clase original.
-
-<img width="926" alt="Screen Shot 2022-11-28 at 22 19 59" src="https://user-images.githubusercontent.com/16981896/204414934-9a5f3dfd-c735-4e69-b3bc-7e2fc64e2a56.png">
-
-**2. Definición de cada elemento**
-
-- **Component:** acá se describen los comportamientos de los componentes y es lo que permite que tanto el objeto como los objetos envueltos se consideren del mismo tipo.
-- **Concrete component:** implementa la interfaz del componente.
-- **Decorator:** es una clase abstracta que también implementa la interfaz del componente y también posee una instancia de esta interfaz.
-- **Concrete decorator:** es una subclase de la clase abstracta Decorator donde se establecen los comportamientos para los objetos proporcionados.
-
-**3. Ejemplo de uso**
-El patrón Decorator se puede utilizar en muchas situaciones, como en la creación de interfaces gráficas de usuario, donde se pueden agregar funcionalidades adicionales a los componentes existentes, como etiquetas, botones y cuadros de texto. También se puede utilizar en la creación de filtros de imágenes, donde se pueden agregar efectos adicionales a las imágenes base.
-
 
 
 
@@ -262,59 +323,7 @@ Mejorando la escalabilidad del código con el patrón Command:
 
 - Fácil extensibilidad: El patrón Command facilita la extensión de nuevas funcionalidades en tu código. Al agregar nuevos comandos, puedes proporcionar nuevas funcionalidades a tu aplicación sin tener que cambiar el código existente.
 
-## 5. Adapter
-El patrón de diseño Adapter se utiliza para adaptar una interfaz existente a otra interfaz requerida por el cliente, permitiendo que objetos con interfaces incompatibles trabajen juntos de manera efectiva.
 
-El adaptador actúa como un puente entre dos interfaces, traduciendo una interfaz en términos que la otra puede entender y utilizar. Este patrón es muy útil cuando se utiliza código heredado o componentes de terceros que no pueden ser modificados para cumplir con los requisitos de la aplicación.
-
-Lo que debes saber sobre el patrón adapter
-
-- Propósito: El patrón Adapter se utiliza para convertir una interfaz incompatible en otra interfaz que el cliente espera. Permite que objetos con interfaces incompatibles puedan trabajar juntos.
-
-- Estructura: El patrón Adapter consiste en tres componentes principales: el Adapter, el Adaptee y el Cliente. El Adaptee es la clase existente que necesitamos adaptar, el Adapter es la clase que adapta la interfaz del Adaptee a la interfaz requerida por el Cliente, y el Cliente es la clase que utiliza el Adapter para interactuar con el Adaptee.
-
-- Tipos: Hay dos tipos de adaptadores, el adaptador de clase y el adaptador de objeto. El adaptador de clase utiliza la herencia para adaptar la interfaz del Adaptee a la interfaz del Cliente, mientras que el adaptador de objeto utiliza la composición para adaptar la interfaz del Adaptee a la interfaz del Cliente. Ambos tipos de adaptadores pueden ser útiles dependiendo del contexto de uso.
-
-Cuándo utilizar Adapter y Bridge en el diseño de software
-
-El patrón Adapter a menudo se compara con el patrón Bridge debido a que ambos involucran la idea de conectar dos componentes o sistemas diferentes. Sin embargo, mientras que el Adapter se enfoca en hacer que un objeto existente funcione con otro objeto incompatible, el Bridge se enfoca en desacoplar una abstracción de su implementación para que puedan variar de manera independiente.
-
-| **Patrón** | **Adapter** | **Bridge** |
-| --- | --- | --- |
-| **Tipo de patrón** | Estructural | Estructural |
-| **Propósito** | Convierte la interfaz de una clase en otra interfaz esperada por el cliente | Separa una abstracción de su implementación, de manera que ambas puedan variar independientemente |
-| **Uso común** | Cuando se desea reutilizar una clase existente que no tiene la interfaz que el cliente requiere | Cuando se desea tener múltiples variantes de la misma abstracción que se pueden modificar y extender de forma independiente |
-| **Componentes** | Adaptador, clase Adaptee, interfaz objetivo y cliente | Abstracción, implementación, clases refinadas y cliente |
-
-<img width="398" alt="Screen Shot 2023-02-26 at 22 31 43" src="https://user-images.githubusercontent.com/16981896/221451920-663fb194-b098-4e37-bf22-d2e5943bb3d0.png">
-
-Posibles escenarios para usar el patrón Adapter
-- Cuando necesitas usar una clase existente que no es compatible con el resto del código, ya sea porque tiene una interfaz diferente o porque tiene un comportamiento diferente al esperado.
-- Cuando necesitas reutilizar una clase existente en una nueva aplicación que tiene diferentes requisitos de interfaz.
-- Cuando necesitas utilizar varias clases diferentes que tienen interfaces incompatibles en un solo lugar, como en una biblioteca o marco de trabajo.
-- Cuando necesitas controlar o limitar el acceso a una clase existente, por ejemplo, para protegerla de cambios o para restringir su uso en un contexto específico.
-- Cuando necesitas adaptar un servicio web o una API que tiene una interfaz incompatible con tu aplicación.
-
-
-## 5. Facade
- Imagina que deseas implementar un sistema de seguridad en tu casa que contengas subsistemas como por ejemplo: un sistema de alarma, sistema de sensores, sistema de camara de vigilancia en entre otros. El dueño de la casa necesita de una interfaz simple, comoda y facil de usar  para interactuar con estos subsistema y mantener su hogar seguro, aqui es que aparace el patron Facade, el usuario no tiene la necesidad de  saber todo lo complejo o lo que ocurre en cada subsistema para poder funcionar.
-
-### Definición
- Definido como una patron de diseño estructural permite ocultar la complejidad de un subsistema esto por medio de una interfaz bastate simple. Esto nos ayuda a poder interactura con el sistema de forma más sencilla sin tener que procuparnos de lo que sucede por detras.
-
- ### ¿Qué puedo hacer con Facade?
-  1. **Ocultar la complejidad:** podemos ocultar lo complejo de un sistema por medio una una interdaz facil de usar. 
-  2. **Interfaz Única:** Proporcionando dicha interfaz unica que nos permite que sea facil de interacturar con el sistema complejo.
-  3. **Reutilizar:** permite la reutilización de los componentes dentro del mismo sistema.
-  4. **Seguridad:** ya que se ocultan los detalles técnicos o internos de un sistema y solo se hace uso de la interfaz que proporciona asegura que solo se limite la interaccion a travez de esta interfaz.
-  5. **Bajo acoplamiento:** con este patrón se evita que las clases **Client** esta acopladas las clases del subsistema de forma directa esto permite actualizarlas, modificarlas y hasta cambiarlas y no afectara el comportamiento del Client.
-
-<img width="640" alt="Screen Shot 2023-01-26 at 21 23 28" src="https://user-images.githubusercontent.com/16981896/214979850-7e7f305d-6ce1-4659-847b-eb985894e971.png">
-
-### Deninición de cada elemento
-- **Client:** hace uso de la interfaz para interactuar con el subsistema.
-- **Facade:** interfaz simplificada para interactuar con el subsistema complejo. 
-- **SubSystem:** son los componentes del subsistema
 
 ## 6.Template Method
 
