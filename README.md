@@ -25,7 +25,7 @@ Este repositorio es el lugar perfecto para aprender sobre los patrones de diseñ
   - [4.4 Patrón de diseño State](#state)
   - [4.5 Patrón de diseño Strategy](#strategy)
   - [4.6 Patrón de diseño Template Method](#template)
-- [5. Referencias](#referencia)
+- [5. Referencias](#referencias)
 
 
 # Introducción <a name="introducción"></a>
